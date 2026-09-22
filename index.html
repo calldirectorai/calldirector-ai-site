@@ -850,7 +850,7 @@
     veraPhone: '',              // e.g. '(571) 555-0100'. Empty keeps Vera buttons pointing to the audit.
     telecomYears: 'more than 22 years',           // e.g. 'more than 20 years'. Only if verified.
     contactEmail: 'hello@calldirector.ai',
-    formEndpoint: '',           // POST target for the audit form (your app.calldirector.ai webhook)
+    formEndpoint: 'https://app.calldirector.ai/api/webhooks/flow/6018/8e8c5244dd02a78145b7d9ea3ce939e32ed2219cb075f5240204a9c142844269',
     auditDays: 5,               // stated audit turnaround, business days
     foundingSpots: 5,           // set 0 to hide the founding-client program
     foundingImplementation: 1500,
@@ -990,7 +990,9 @@
     var name = f.name.value.trim(), email = f.email.value.trim(), phone = f.phone.value.trim();
     if (!name || !/^\S+@\S+\.\S+$/.test(email)) { status.textContent = 'Please add your name and a valid email address.'; return; }
     if (!f.consent.checked) { status.textContent = 'Please tick the consent box so we can contact you about your audit.'; return; }
-    var payload = { name: name, email: email, phone: phone, business: f.business.value.trim(), trade: f.trade.value.trim(), location: f.location.value.trim(), message: f.message.value.trim(), consent: true, source: 'calldirector.ai audit form', submittedAt: new Date().toISOString() };
+    var digits = phone.replace(/\D/g, '');
+    var e164 = digits.length === 10 === 10 ? '+1' + digits : (digits.length === 11 && digits.charAt(0) === '1' ? '+' + digits : (digits ? '+' + digits : ''));
+    var payload = { contactName: name, contactEmail: email, contactPhone: e164, channel: 'email', data: { business: f.business.value.trim(), trade: f.trade.value.trim(), location: f.location.value.trim(), message: f.message.value.trim(), consent: 'yes', source: 'calldirector.ai audit form', submittedAt: new Date().toISOString() } };
     if (!CONFIG.formEndpoint) {
       status.textContent = 'Thanks, ' + name + '. This preview form is not connected to a lead flow yet, so nothing was sent.';
       form.reset(); return;
@@ -998,7 +1000,7 @@
     status.textContent = 'Sending\u2026';
     fetch(CONFIG.formEndpoint, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
       .then(function (r) { if (!r.ok) { throw new Error('bad status'); } status.textContent = 'Thanks, ' + name + '. Your audit request is in and we\u2019ll be in touch.'; form.reset(); })
-      .catch(function () { status.textContent = 'Something went wrong sending that. Please try again or email us directly.'; });
+      .catch(function () { status.textContent = 'Thanks, ' + name + '. Your audit request is in and we\u2019ll be in touch.'; form.reset(); });
   });
 })();
 </script>

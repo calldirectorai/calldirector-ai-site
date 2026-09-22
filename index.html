@@ -991,7 +991,7 @@
     if (!name || !/^\S+@\S+\.\S+$/.test(email)) { status.textContent = 'Please add your name and a valid email address.'; return; }
     if (!f.consent.checked) { status.textContent = 'Please tick the consent box so we can contact you about your audit.'; return; }
     var digits = phone.replace(/\D/g, '');
-    var e164 = digits.length === 10 === 10 ? '+1' + digits : (digits.length === 11 && digits.charAt(0) === '1' ? '+' + digits : (digits ? '+' + digits : ''));
+    var e164 = digits.length === 10 ? '+1' + digits : (digits.length === 11 && digits.charAt(0) === '1' ? '+' + digits : (digits ? '+' + digits : ''));
     var payload = { contactName: name, contactEmail: email, contactPhone: e164, channel: 'email', data: { business: f.business.value.trim(), trade: f.trade.value.trim(), location: f.location.value.trim(), message: f.message.value.trim(), consent: 'yes', source: 'calldirector.ai audit form', submittedAt: new Date().toISOString() } };
     if (!CONFIG.formEndpoint) {
       status.textContent = 'Thanks, ' + name + '. This preview form is not connected to a lead flow yet, so nothing was sent.';

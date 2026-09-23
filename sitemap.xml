@@ -1,13 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://calldirectorai.github.io/calldirector-ai-site/solutions/</loc>
-    <lastmod>2026-09-23T19:00:48.468Z</lastmod>
+    <loc>https://calldirectorai.github.io/calldirector-ai-site/</loc>
+    <lastmod>2026-09-23T19:06:41.687Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://calldirectorai.github.io/calldirector-ai-site/</loc>
-    <lastmod>2026-09-23T18:17:41.395Z</lastmod>
+    <loc>https://calldirectorai.github.io/calldirector-ai-site/solutions/</loc>
+    <lastmod>2026-09-23T19:06:35.461Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://calldirectorai.github.io/calldirector-ai-site/vera/</loc>
+    <lastmod>2026-09-23T19:06:29.278Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://calldirectorai.github.io/calldirector-ai-site/pricing/</loc>
+    <lastmod>2026-09-23T19:06:24.290Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://calldirectorai.github.io/calldirector-ai-site/industries/</loc>
+    <lastmod>2026-09-23T19:06:19.118Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://calldirectorai.github.io/calldirector-ai-site/how/</loc>
+    <lastmod>2026-09-23T19:06:14.124Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://calldirectorai.github.io/calldirector-ai-site/contractors/</loc>
+    <lastmod>2026-09-23T19:06:09.258Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://calldirectorai.github.io/calldirector-ai-site/about/</loc>
+    <lastmod>2026-09-23T19:06:04.226Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
@@ -16,38 +46,8 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://calldirectorai.github.io/calldirector-ai-site/pricing/</loc>
-    <lastmod>2026-09-23T13:25:15.140Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://calldirectorai.github.io/calldirector-ai-site/vera/</loc>
-    <lastmod>2026-09-23T11:55:54.971Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
     <loc>https://calldirectorai.github.io/calldirector-ai-site/privacy/</loc>
     <lastmod>2026-09-23T11:55:44.688Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://calldirectorai.github.io/calldirector-ai-site/industries/</loc>
-    <lastmod>2026-09-23T11:55:34.563Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://calldirectorai.github.io/calldirector-ai-site/how/</loc>
-    <lastmod>2026-09-23T11:55:29.603Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://calldirectorai.github.io/calldirector-ai-site/contractors/</loc>
-    <lastmod>2026-09-23T11:55:24.561Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://calldirectorai.github.io/calldirector-ai-site/about/</loc>
-    <lastmod>2026-09-23T11:55:14.131Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
 </urlset>

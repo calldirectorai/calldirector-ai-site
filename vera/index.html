@@ -363,6 +363,7 @@
           <a class="btn btn-primary" style="min-height:58px;font-size:18px" href="../audit/" data-vera-call><svg width="20" height="20"><use href="#i-play"/></svg><span data-vera-label>Get a Vera demo</span></a>
           <span style="font-size:20px;font-weight:600" data-cfg="veraPhone" data-ph=""></span>
         </div>
+        <p class="muted-d" style="font-size:14px">This is the same number that answers CallDirector's own calls — not a sandboxed demo line.</p>
         <a class="link" style="color:var(--lav)" href="../how/">Vera is one part of the full system →</a>
       </div>
       <div class="card-d stack" style="gap:14px" aria-label="Sample call">
@@ -458,7 +459,7 @@
   /* vera buttons */
   document.querySelectorAll('[data-vera-call]').forEach(function (a) {
     var lab = a.querySelector('[data-vera-label]');
-    if (CONFIG.veraPhone) { a.setAttribute('href', tel(CONFIG.veraPhone)); if (lab) { lab.textContent = 'Talk to Vera Live'; } }
+    if (CONFIG.veraPhone) { a.setAttribute('href', tel(CONFIG.veraPhone)); if (lab) { lab.textContent = 'Call Us \u2014 Vera Answers'; } }
     else if (lab) { lab.textContent = 'Get a Vera demo'; }
   });
 

@@ -485,7 +485,7 @@
   /* vera buttons */
   document.querySelectorAll('[data-vera-call]').forEach(function (a) {
     var lab = a.querySelector('[data-vera-label]');
-    if (CONFIG.veraPhone) { a.setAttribute('href', tel(CONFIG.veraPhone)); if (lab) { lab.textContent = 'Talk to Vera Live'; } }
+    if (CONFIG.veraPhone) { a.setAttribute('href', tel(CONFIG.veraPhone)); if (lab) { lab.textContent = 'Call Us \u2014 Vera Answers'; } }
     else if (lab) { lab.textContent = 'Get a Vera demo'; }
   });
 

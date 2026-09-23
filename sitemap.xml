@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://calldirectorai.github.io/calldirector-ai-site/solutions/</loc>
+    <lastmod>2026-09-23T19:00:48.468Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://calldirectorai.github.io/calldirector-ai-site/</loc>
     <lastmod>2026-09-23T18:17:41.395Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -18,11 +23,6 @@
   <url>
     <loc>https://calldirectorai.github.io/calldirector-ai-site/vera/</loc>
     <lastmod>2026-09-23T11:55:54.971Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://calldirectorai.github.io/calldirector-ai-site/solutions/</loc>
-    <lastmod>2026-09-23T11:55:49.692Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>

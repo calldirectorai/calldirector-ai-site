@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://calldirectorai.github.io/calldirector-ai-site/pricing/</loc>
+    <lastmod>2026-09-23T11:55:39.664Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://calldirectorai.github.io/calldirector-ai-site/industries/</loc>
     <lastmod>2026-09-23T11:55:34.563Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -38,11 +43,6 @@
   <url>
     <loc>https://calldirectorai.github.io/calldirector-ai-site/privacy/</loc>
     <lastmod>2026-09-23T11:54:44.886Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://calldirectorai.github.io/calldirector-ai-site/pricing/</loc>
-    <lastmod>2026-09-23T11:54:28.850Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>

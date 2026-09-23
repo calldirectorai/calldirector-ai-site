@@ -363,6 +363,7 @@
           <a class="btn btn-ghost" href="#" data-scroll="calc">See what missed leads cost you</a>
           <a class="link" style="color:var(--lav)" href="how/">See how it works</a>
         </div>
+        <p style="font-size:16px;color:var(--lav)">Hear her for yourself: call Vera at <a href="tel:+12408521600" style="color:#fff;font-weight:700;text-decoration:underline">(240) 852-1600</a>, day or night.</p>
         <p class="caps">AI Website • AI Receptionist • SMS Follow-Up • CRM • Booking • Reviews • Reactivation</p>
         <p style="font-size:15px;font-weight:600;color:#FBBF24">We're taking a limited number of founding DMV clients right now — one per trade, per territory.</p>
       </div>
@@ -547,7 +548,7 @@
   <div class="sec">
     <div class="wrap split" style="grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);align-items:start">
       <h2>Straight answers.</h2>
-      <div class="faq" data-faq></div>
+              <div class="faq" data-faq><div class="q"><h3>Will it sound like a robot?</h3><p class="muted">Vera tells callers she is an AI assistant. We set her voice, script, and escalation rules with you, and you hear sample calls before anything goes live.</p></div><div class="q"><h3>What if it is an emergency or a call she can’t handle?</h3><p class="muted">We agree the rules with you up front: which calls go straight to a person, which take a message, and what Vera never answers on her own.</p></div><div class="q"><h3>Do you text my customers?</h3><p class="muted">Yes, with their consent. We register your business for compliant text messaging as part of setup, so replies land reliably instead of getting filtered by carriers as spam.</p></div><div class="q"><h3>How long does setup take?</h3><p class="muted">Most systems go live 2 to 3 weeks after kickoff, depending on how much of your current site and CRM we’re rebuilding versus building from scratch.</p></div><div class="q"><h3>Is there a contract?</h3><p class="muted">No long-term contract. The one-time implementation fee gets your system built and live, then the managed plan runs month-to-month. Cancel anytime with 30 days’ notice.</p></div></div>
     </div>
   </div>
   <div class="sec cta">
@@ -593,7 +594,12 @@
     foundingSpots: 5,           // set 0 to hide the founding-client program
     foundingImplementation: 1500,
     testimonials: [],           // [{ quote, name, role, company, note }]  note e.g. 'Founding client'
-    caseStudies: []             // [{ company, trade, headline, metrics:[{label, before, after}] }]
+    caseStudies: [],            // [{ company, trade, headline, metrics:[{label, before, after}] }]
+    showProjects: false,        // flip to true once each client below has approved being named
+    projects: [
+      { company: 'All Wheels Tag & Title', trade: 'Automotive services', location: 'Gaithersburg, MD', built: 'Website, an AI-answered business line, contact-form lead capture, and company email setup, maintained and improved month to month.', url: 'https://allwheelstagandtitle.com' },
+      { company: 'Trebor Financial Solutions', trade: 'Financial services', location: '', built: 'A review funnel that sends happy clients to Google, a digital business card with QR codes, and Google Business Profile setup.', url: 'https://treborfinancialsolutions.com' }
+    ]
   };
 
   var FAQ = [
@@ -634,6 +640,11 @@
   (function () {
     var box = document.getElementById('proof'); if (!box) { return; }
     var html = '';
+    if (CONFIG.showProjects && CONFIG.projects && CONFIG.projects.length) {
+      html += '<div class="eyebrow" style="margin-bottom:16px">What we\u2019ve built</div><div class="g g3" style="margin-bottom:24px">' + CONFIG.projects.map(function (p) {
+        return '<div class="card"><div class="tag">' + esc(p.trade) + '</div><h3>' + esc(p.company) + '</h3>' + (p.location ? '<p class="muted" style="margin-bottom:8px">' + esc(p.location) + '</p>' : '') + '<p>' + esc(p.built) + '</p>' + (p.url ? '<p style="margin-top:12px"><a class="link" href="' + esc(p.url) + '" target="_blank" rel="noopener">Visit site \u2192</a></p>' : '') + '</div>';
+      }).join('') + '</div>';
+    }
     if (CONFIG.caseStudies.length) {
       html += '<div class="g g3" style="margin-bottom:24px">' + CONFIG.caseStudies.map(function (c) {
         return '<div class="card"><div class="tag">' + esc(c.trade || '') + '</div><h3>' + esc(c.company) + '</h3><p style="margin-bottom:12px">' + esc(c.headline || '') + '</p>' +
@@ -645,8 +656,8 @@
         return '<div class="quote"><p class="q">\u201C' + esc(t.quote) + '\u201D</p><div><b>' + esc(t.name) + '</b><br><small>' + esc([t.role, t.company].filter(Boolean).join(', ')) + (t.note ? ' \u00B7 ' + esc(t.note) : '') + '</small></div></div>';
       }).join('') + '</div>';
     }
-    if (!html) {
-      html = '<div class="card" style="padding:clamp(24px,3vw,40px)"><h3 style="font-size:26px;margin-bottom:10px">We publish results only after we\u2019ve measured them.</h3><p class="lede" style="color:var(--muted);max-width:760px">Our first clients are being tracked from a baseline: how fast new leads get a reply, how many after-hours inquiries are captured, and how many bids are followed up. When the numbers are in, and the client approves them, they appear here.</p><p style="margin-top:20px"><a class="link" href="pricing/">See the founding client program \u2192</a></p></div>';
+    if (!CONFIG.caseStudies.length && !CONFIG.testimonials.length) {
+      html += '<div class="card" style="padding:clamp(24px,3vw,40px)"><h3 style="font-size:26px;margin-bottom:10px">We publish results only after we\u2019ve measured them.</h3><p class="lede" style="color:var(--muted);max-width:760px">Our first clients are being tracked from a baseline: how fast new leads get a reply, how many after-hours inquiries are captured, and how many bids are followed up. When the numbers are in, and the client approves them, they appear here.</p><p style="margin-top:20px"><a class="link" href="pricing/">See the founding client program \u2192</a></p></div>';
     }
     box.innerHTML = html;
   })();

@@ -1,53 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://calldirector.ai/vera/</loc>
-    <lastmod>2026-09-25T05:08:55.561Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://calldirector.ai/solutions/</loc>
-    <lastmod>2026-09-25T05:08:44.802Z</lastmod>
+    <loc>https://calldirector.ai/</loc>
+    <lastmod>2026-09-25T05:33:50.144Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://calldirector.ai/privacy/</loc>
-    <lastmod>2026-09-25T05:08:39.448Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://calldirector.ai/pricing/</loc>
-    <lastmod>2026-09-25T05:08:34.757Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://calldirector.ai/industries/</loc>
-    <lastmod>2026-09-25T05:08:29.354Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://calldirector.ai/how/</loc>
-    <lastmod>2026-09-25T05:08:23.470Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://calldirector.ai/contractors/</loc>
-    <lastmod>2026-09-25T05:08:18.146Z</lastmod>
+    <lastmod>2026-09-25T05:33:28.207Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://calldirector.ai/audit/</loc>
-    <lastmod>2026-09-25T05:08:13.150Z</lastmod>
+    <lastmod>2026-09-25T05:33:10.546Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://calldirector.ai/vera/</loc>
+    <lastmod>2026-09-25T05:32:55.504Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://calldirector.ai/pricing/</loc>
+    <lastmod>2026-09-25T05:32:38.272Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://calldirector.ai/contractors/</loc>
+    <lastmod>2026-09-25T05:32:23.282Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://calldirector.ai/how/</loc>
+    <lastmod>2026-09-25T05:32:07.972Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://calldirector.ai/about/</loc>
-    <lastmod>2026-09-25T05:08:08.267Z</lastmod>
+    <lastmod>2026-09-25T05:31:51.457Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://calldirector.ai/</loc>
-    <lastmod>2026-09-25T05:08:02.897Z</lastmod>
+    <loc>https://calldirector.ai/industries/</loc>
+    <lastmod>2026-09-25T05:31:36.627Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://calldirector.ai/solutions/</loc>
+    <lastmod>2026-09-25T05:31:21.516Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
 </urlset>

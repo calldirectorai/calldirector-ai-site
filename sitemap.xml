@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://calldirector.ai/how/</loc>
+    <lastmod>2026-09-29T15:04:43.209Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://calldirector.ai/contractors/</loc>
     <lastmod>2026-09-29T15:04:35.482Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -18,11 +23,6 @@
   <url>
     <loc>https://calldirector.ai/</loc>
     <lastmod>2026-09-29T15:04:12.158Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://calldirector.ai/how/</loc>
-    <lastmod>2026-09-29T15:04:05.135Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>

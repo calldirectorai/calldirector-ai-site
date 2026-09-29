@@ -1,3 +1,8 @@
+window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-GKLZMQMLMK');
+
 (function(){
   var t = document.getElementById('vera-teaser');
   if (!t) { return; }

@@ -388,6 +388,7 @@
         <div class="field"><label for="f-window">Business hours or best test window (optional)</label><input id="f-window" name="testWindow" type="text" placeholder="e.g. Mon–Fri 8 AM–5 PM; after-hours test is OK"></div>
         <div class="field"><label for="f-msg">Where do you think leads are slipping away?</label><textarea id="f-msg" name="message"></textarea></div>
         <label class="consent"><input type="checkbox" id="f-consent" name="consent" required><span>I authorize CallDirector AI to test the public-facing phone number and website I provide for this private Lead Leak Audit. I also agree that CallDirector AI may contact me by phone, text, or email about my audit. Message frequency varies. Message and data rates may apply. Texts come from (844) 727-8090. Reply STOP to opt out or HELP for help. Consent is not a condition of purchase. See our <a href="../privacy/" style="text-decoration:underline">privacy policy</a>.</span></label>
+        <div aria-hidden="true" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden"><label for="f-company2">Leave this field empty</label><input id="f-company2" name="company2" type="text" tabindex="-1" autocomplete="off"></div>
         <button class="btn btn-primary" type="submit" style="min-height:56px">Request My Free Audit</button>
         <p class="status" id="formStatus" role="status" aria-live="polite"></p>
       </form>
@@ -575,10 +576,15 @@
 
   /* audit form */
   var form = document.getElementById('leadForm'), status = document.getElementById('formStatus');
+  var loadedAt = Date.now(), lastSent = 0;
   if (form) {
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     var f = form.elements;
+    if (f.company2 && f.company2.value) { status.textContent = 'Thanks.'; return; }
+    if (Date.now() - loadedAt < 3000) { status.textContent = 'Please review your details and press the button again.'; return; }
+    if (Date.now() - lastSent < 30000) { status.textContent = 'Your request was just sent. Please wait a moment before sending another.'; return; }
+    if (/https?:\/\/|www\./i.test([f.name.value, f.business.value, f.trade.value, f.location.value, f.message.value].join(' '))) { status.textContent = 'Please remove links from the text fields. Your website goes in the website field.'; return; }
     var name = f.name.value.trim(), email = f.email.value.trim(), phone = f.phone.value.trim();
     var website = f.website.value.trim(), businessPhone = f.businessPhone.value.trim(), testWindow = f.testWindow.value.trim();
     if (!name || !/^\S+@\S+\.\S+$/.test(email) || !website || !businessPhone) { status.textContent = 'Please add your name, a valid email, your website URL, and the public business phone number you want us to review.'; return; }
@@ -587,14 +593,15 @@
     var e164 = digits.length === 10 ? '+1' + digits : (digits.length === 11 && digits.charAt(0) === '1' ? '+' + digits : (digits ? '+' + digits : ''));
     var bizDigits = businessPhone.replace(/\D/g, '');
     var bizE164 = bizDigits.length === 10 ? '+1' + bizDigits : (bizDigits.length === 11 && bizDigits.charAt(0) === '1' ? '+' + bizDigits : (bizDigits ? '+' + bizDigits : businessPhone));
-    var payload = { contactName: name, contactEmail: email, contactPhone: e164, channel: 'email', data: { business: f.business.value.trim(), trade: f.trade.value.trim(), location: f.location.value.trim(), website: website, businessPhoneToTest: bizE164, testWindow: testWindow, message: f.message.value.trim(), consent: 'yes', source: 'calldirector.ai audit form', submittedAt: new Date().toISOString() } };
+    var attr = (window.cdAttribution ? window.cdAttribution() : { label: 'direct', source: 'direct', medium: '', campaign: '', content: '', landing: '', fbclid: '' });
+    var payload = { contactName: name, contactEmail: email, contactPhone: e164, channel: 'email', data: { business: f.business.value.trim(), trade: f.trade.value.trim(), location: f.location.value.trim(), website: website, businessPhoneToTest: bizE164, testWindow: testWindow, message: f.message.value.trim(), consent: 'yes', source: attr.label, utmSource: attr.source, utmMedium: attr.medium, utmCampaign: attr.campaign, utmContent: attr.content, landingPage: attr.landing, fromFacebookAd: attr.fbclid, form: 'calldirector.ai audit form', submittedAt: new Date().toISOString() } };
     if (!CONFIG.formEndpoint) {
       status.textContent = 'Thanks, ' + name + '. This preview form is not connected to a lead flow yet, so nothing was sent.';
       return;
     }
     status.textContent = 'Sending\u2026';
     fetch(CONFIG.formEndpoint, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
-      .then(function (r) { if (!r.ok) { throw new Error('bad status'); } status.textContent = 'Thanks, ' + name + '. Your audit request is in. We\u2019ll confirm the business details and send your private one-page report within ' + CONFIG.auditDays + ' business days.'; form.reset(); })
+      .then(function (r) { if (!r.ok) { throw new Error('bad status'); } status.textContent = 'Thanks, ' + name + '. Your audit request is in. We\u2019ll confirm the business details and send your private one-page report within ' + CONFIG.auditDays + ' business days.'; lastSent = Date.now(); try { if (window.gtag) { gtag('event', 'generate_lead', { event_category: 'audit_form', lead_source: attr.label }); } if (window.fbq) { fbq('track', 'Lead'); } } catch (x) {} form.reset(); })
       .catch(function () { status.innerHTML = 'We couldn\u2019t send your request right now. Please try again, call <a href="tel:+12408521600">(240) 852-1600</a>, or email <a href="mailto:hello@calldirector.ai">hello@calldirector.ai</a>.'; });
   });
   }

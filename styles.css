@@ -172,6 +172,7 @@ a.tile:hover{border-color:var(--accent)}
 
 @media (max-width:1000px){
   .split,.calc{grid-template-columns:1fr}
+  .split[style]{grid-template-columns:1fr !important}
   .stages{grid-template-columns:1fr;gap:16px}
   .stages::before{display:none}
   .stage{display:grid;grid-template-columns:44px 1fr;column-gap:16px}

@@ -378,15 +378,17 @@
         <div class="fields">
           <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
           <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
-          <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
-          <div class="field"><label for="f-biz">Business name</label><input id="f-biz" name="business" type="text" autocomplete="organization"></div>
-          <div class="field"><label for="f-trade">Type of business</label><input id="f-trade" name="trade" type="text" placeholder="e.g. commercial painting"></div>
-          <div class="field"><label for="f-city">City and state</label><input id="f-city" name="location" type="text"></div>
+          <div class="field"><label for="f-phone">Phone (optional)</label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
+          <div class="field"><label for="f-biz">Business name (optional)</label><input id="f-biz" name="business" type="text" autocomplete="organization"></div>
+          <div class="field"><label for="f-trade">Type of business (optional)</label><input id="f-trade" name="trade" type="text" placeholder="e.g. commercial painting"></div>
+          <div class="field"><label for="f-city">City and state (optional)</label><input id="f-city" name="location" type="text"></div>
           <div class="field"><label for="f-website">Website URL to review</label><input id="f-website" name="website" type="url" autocomplete="url" placeholder="https://yourbusiness.com" required></div>
           <div class="field"><label for="f-bizphone">Public business phone number to test</label><input id="f-bizphone" name="businessPhone" type="tel" required><small class="muted" style="font-size:13px">Use the number a new customer would call.</small></div>
         </div>
+        <details class="more"><summary>Add details (optional)</summary>
         <div class="field"><label for="f-window">Business hours or best test window (optional)</label><input id="f-window" name="testWindow" type="text" placeholder="e.g. Mon–Fri 8 AM–5 PM; after-hours test is OK"></div>
-        <div class="field"><label for="f-msg">Where do you think leads are slipping away?</label><textarea id="f-msg" name="message"></textarea></div>
+        <div class="field"><label for="f-msg">Where do you think leads are slipping away? (optional)</label><textarea id="f-msg" name="message"></textarea></div>
+        </details>
         <label class="consent"><input type="checkbox" id="f-consent" name="consent" required><span>I authorize CallDirector AI to test the public-facing phone number and website I provide for this private Lead Leak Audit. I also agree that CallDirector AI may contact me by phone, text, or email about my audit. Message frequency varies. Message and data rates may apply. Texts come from (844) 727-8090. Reply STOP to opt out or HELP for help. Consent is not a condition of purchase. See our <a href="../privacy/" style="text-decoration:underline">privacy policy</a>.</span></label>
         <div aria-hidden="true" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden"><label for="f-company2">Leave this field empty</label><input id="f-company2" name="company2" type="text" tabindex="-1" autocomplete="off"></div>
         <button class="btn btn-primary" type="submit" style="min-height:56px">Request My Free Audit</button>
@@ -464,7 +466,7 @@
   </div>
 </footer>
 
-<div class="mbar"><a class="btn btn-primary" href="tel:+12408521600">Hear Vera Answer Live</a></div>
+<div class="mbar"><a class="btn btn-primary" href="#leadForm" data-scroll="leadForm">Get My Free Audit</a></div>
 
 <script>
 (function () {

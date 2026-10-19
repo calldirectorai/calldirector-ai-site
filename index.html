@@ -331,6 +331,7 @@
 })();
 </script>
 <link rel="stylesheet" href="/styles.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"CallDirector AI","url":"https://calldirector.ai/","email":"hello@calldirector.ai","telephone":"+1-240-852-1600","description":"AI call answering, lead follow-up and booking systems for service businesses in Washington DC, Maryland and Virginia.","areaServed":["Washington, DC","Maryland","Virginia"],"founder":{"@type":"Person","name":"Rodrigue Dossouvi","sameAs":"https://www.linkedin.com/in/roddossouvi"},"sameAs":["https://facebook.com/CallDirectorAI","https://instagram.com/calldirectorai","https://share.google/0OtLmXQK4wiiwLQkR"]}</script>
 </head>
 <body>
 
@@ -373,12 +374,18 @@
 <div class="sec-navy hero">
     <div class="wrap">
       <div class="stack" style="gap:26px;align-items:center;max-width:760px;margin:0 auto;text-align:center">
-        <h1>Turn More Leads Into Paying Customers — Automatically.</h1>
-        <p class="lede muted-d" style="max-width:640px">CallDirector installs an AI-powered system that answers calls, follows up instantly, books appointments, and stops opportunities from slipping away — 24/7.</p>
-        <p style="font-size:16px;line-height:1.5;color:#fff;margin-top:20px;max-width:640px">Built by a 22-year phone-system engineer — not another chatbot agency.</p>
-        <div class="btns" style="justify-content:center;margin-top:26px">
+        <h1>Stop Losing Jobs to Missed Calls and Slow Follow-Up</h1>
+        <p class="lede muted-d" style="max-width:640px">CallDirector builds and manages AI call answering and lead-response workflows for service businesses. Start with Vera Front Desk at $197/month plus $299 setup, or scope a system for lead capture, booking, and follow-up.</p>
+        <p style="font-size:16px;line-height:1.5;color:#fff;margin-top:20px;max-width:640px">Built by Rodrigue Dossouvi — 22 years keeping business calls connected.</p>
+        <div class="btns btns-stack" style="justify-content:center;margin-top:26px">
           <a class="btn btn-primary" href="audit/">Get My Free Lead Leak Audit</a>
-          <a class="btn btn-line" href="tel:+12408521600">Hear Vera Answer Live</a>
+          <div class="try" role="group" aria-labelledby="try-lbl">
+            <div class="try-lbl" id="try-lbl">Try Vera — Chat or Call</div>
+            <div class="try-btns">
+              <button type="button" class="btn btn-line" id="chatOpen" aria-haspopup="dialog">Chat with Vera</button>
+              <a class="btn btn-line" href="tel:+12408521600">Call Vera live</a>
+            </div>
+          </div>
           <a class="link" style="color:var(--lav)" href="how/">See how it works</a>
         </div>
         <p class="caps" style="font-size:12px;line-height:1.45;color:rgba(196,181,253,.78);margin-top:18px;max-width:700px">AI Website • AI Receptionist • SMS Follow-Up • CRM • Booking • Reviews • Reactivation</p>
@@ -418,9 +425,9 @@
         </div>
       </div>
       <div class="g g3" style="margin-top:44px">
-        <div class="stat"><b>48%</b><p>of calls to home-services businesses go unanswered.</p><small>Source: <a href="https://www.invoca.com/reports/the-invoca-home-services-lead-conversion-benchmarks-report-2026" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">Invoca, 2026 Home Services Lead Conversion Benchmarks</a>.</small></div>
+        <div class="stat"><b>Only 52%</b><p>of calls to home-services businesses are answered by a person (Invoca, 2026).</p><small>Source: <a href="https://www.invoca.com/reports/the-invoca-home-services-lead-conversion-benchmarks-report-2026" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">Invoca, 2026 Home Services Lead Conversion Benchmarks</a>.</small></div>
         <div class="stat"><b>55%</b><p>of home-services businesses don't ask leads to book or buy.</p><small>Source: <a href="https://www.invoca.com/reports/the-invoca-home-services-lead-conversion-benchmarks-report-2026" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">Invoca, 2026 Home Services Lead Conversion Benchmarks</a>.</small></div>
-        <div class="stat"><b>21×</b><p>Contacting a lead within 5 minutes made qualifying them about 21 times likelier than waiting 30 minutes.</p><small>Source: Lead Response Management study, Dr. James Oldroyd (MIT) with InsideSales.com, 2007.</small></div>
+        <div class="stat"><b>21×</b><p>Contacting a lead within 5 minutes made qualifying them about 21 times likelier than waiting 30 minutes.</p><small>Source: <a href="https://www.mortech.com/hs-fs/hub/25649/file-13535879-pdf/docs/mit_study.pdf" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">Lead Response Management study</a>, Dr. James Oldroyd (MIT) with InsideSales.com, 2007.</small></div>
       </div>
       <div class="flow" role="list" aria-label="How opportunities move through CallDirector">
         <div class="node" role="listitem">Website, Google, ads, referrals</div><svg class="arr" width="24" height="24" aria-hidden="true"><use href="#i-arrow"/></svg>
@@ -478,13 +485,15 @@
         <h2>Meet Vera — Your 24/7 AI Front Desk</h2>
         <p class="lede muted-d" style="max-width:560px">Vera answers when your team can't. She can answer common questions, qualify prospects, capture customer information, route calls, book appointments, and trigger automated follow-up — day or night.</p>
         <a class="btn btn-primary" href="vera/"><svg width="18" height="18"><use href="#i-play"/></svg>Meet Vera</a>
+        <!-- Enable when /audio/vera-sample-call.mp3 (recorded sample call, client-permitted) is approved -->
+        <div id="sample-call" hidden></div>
       </div>
       <div class="card-d stack" style="gap:12px" aria-label="Sample call">
         <div class="eyebrow" style="margin:0 0 4px">Sample call</div>
         <div class="bub c">Hi, I'd like a quote. Can someone come out this week?</div>
         <div class="bub v">Absolutely. What's the address, and what do you need done?</div>
         <div class="bub c">It's a commercial lobby. Thursday works.</div>
-        <div class="bub v">Thursday is booked. I'll text you the details now.</div>
+        <div class="bub v">Great, you're down for Thursday. I'll text you the details now.</div>
       </div>
     </div>
   </div>
@@ -508,7 +517,8 @@
   <div class="sec sec-alt">
     <div class="wrap">
       <div class="eyebrow">Client results</div>
-      <h2 style="margin-bottom:32px">Real clients. Real numbers, only when we've measured them.</h2>
+      <h2 style="margin-bottom:14px">What We've Built</h2>
+      <p class="muted lede" style="max-width:760px;margin-bottom:32px">Explore examples of delivered client work below. We publish measured outcomes only after collecting the evidence and obtaining client approval where required.</p>
       <div id="proof"></div>
     </div>
   </div>
@@ -533,28 +543,29 @@
     </div>
   </div>
 
-  <div class="sec sec-alt">
-    <div class="wrap g" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr))">
-      <div style="border-radius:24px;padding:clamp(24px,3vw,36px);background:var(--navy);color:#fff">
-        <div class="eyebrow">Flagship</div>
-        <h3 style="font-size:30px">CallDirector AI Growth System</h3>
-        <p class="muted-d" style="margin:12px 0 18px">Custom implementation based on your business.</p>
-        <p class="price-big">Implementation starting at <b>$2,500</b></p>
-        <p class="price-big">Managed AI Growth Systems starting at <b>$497/month</b></p>
-        <ul class="checks" style="margin:22px 0;font-size:16px;color:#E2E8F0">
-          <li><svg width="20" height="20"><use href="#i-check"/></svg>AI-powered website and landing pages</li>
-          <li><svg width="20" height="20"><use href="#i-check"/></svg>Vera AI receptionist and web chat</li>
-          <li><svg width="20" height="20"><use href="#i-check"/></svg>Lead capture, CRM, SMS and email follow-up</li>
-          <li><svg width="20" height="20"><use href="#i-check"/></svg>Booking, estimate follow-up, reviews, reactivation</li>
-        </ul>
-        <a class="btn btn-primary" href="pricing/">See pricing</a>
+  <div class="sec sec-alt" id="plans">
+    <div class="wrap g g3">
+      <div class="card pcard">
+        <h3>Vera Front Desk</h3>
+        <p class="price-big" style="color:var(--text)"><b>$197</b>/mo</p>
+        <p class="price-big" style="color:var(--text)">+ <b>$299</b> setup</p>
+        <p class="pdesc">200 call minutes and 500 texts included each month. A common starting point.</p>
+        <a class="btn btn-outline" href="vera/">See Vera</a>
       </div>
-      <div class="card stack" style="gap:12px;align-items:flex-start;padding:clamp(24px,3vw,36px);border-radius:24px">
-        <div class="tag">Entry level</div>
-        <h3 style="font-size:28px">Vera Front Desk</h3>
-        <p class="price-big">From <b>$197/month</b> + $299 setup</p>
-        <p class="muted">Your 24/7 AI front desk on its own, with 200 AI call minutes and 500 texts included each month and room to grow into the full system.</p>
-        <a class="btn btn-outline" style="margin-top:auto" href="vera/">See Vera</a>
+      <div class="card pcard">
+        <h3>Vera + Follow-Up</h3>
+        <p class="price-big" style="color:var(--text)"><b>$347</b>/mo</p>
+        <p class="price-big" style="color:var(--text)">+ <b>$499</b> setup</p>
+        <p class="pdesc">500 minutes and 1,000 texts. Adds missed-call text-back, SMS/email follow-up, booking links, review requests, and a monthly results report.</p>
+        <a class="btn btn-outline" href="pricing/">See Plan Details</a>
+      </div>
+      <div class="pcard pcard-dk">
+        <h3>AI Growth System</h3>
+        <p class="price-big">from <b>$497</b>/mo</p>
+        <p class="price-big">+ implementation from <b>$2,500</b></p>
+        <p class="pfound">Published founding offer: $1,500 implementation for the first 5 qualified DMV businesses, subject to qualification and availability.</p>
+        <p class="pdesc">A custom implementation that can combine website, Vera, CRM, booking, and reactivation. Selected components, integrations, scope, and final pricing are confirmed before work begins.</p>
+        <a class="btn btn-primary" href="audit/">Start With a Free Audit</a>
       </div>
     </div>
   </div>
@@ -578,13 +589,13 @@
   </div>
   <div class="sec cta">
     <div class="wrap">
-      <h2>How many opportunities are slipping through your business today?</h2>
-      <p>Let's identify where leads are getting lost — calls, forms, follow-up, booking, or customer reactivation — and build a system to close the gaps.</p>
+      <h2>Find Out Where Leads Are Slipping Away</h2>
+      <p>We test the public call path and website you authorize, then send you a private one-page report with the first three fixes we'd prioritize. Turnaround: 5 business days.</p>
       <div class="btns">
-        <a class="btn btn-white" href="audit/">Build My AI Growth System</a>
+        <a class="btn btn-white" href="audit/">Request My Free Lead Leak Audit</a>
         <a class="btn btn-line" href="vera/" data-vera-call><span data-vera-label>Talk to Vera</span></a>
       </div>
-      <p style="margin-top:14px;text-align:center"><a class="link" style="color:#EDE9FE;font-size:15px" href="https://app.calldirector.ai/forms/gpz2qrx9?theme=dark&accent=%23F59E0B&bg=%230F172A&surface=%231E293B&field=%230F172A&text=%23F1F5F9&gradient=0" target="_blank" rel="noopener">Prefer a call back? Request a call</a></p>
+      <p style="margin-top:14px;text-align:center"><a class="link" style="color:#EDE9FE;font-size:15px" href="https://app.calldirector.ai/forms/gpz2qrx9?theme=dark&accent=%23F59E0B&bg=%230F172A&surface=%231E293B&field=%230F172A&text=%23F1F5F9&gradient=0" target="_blank" rel="noopener">Ready to talk? Request a call</a></p>
     </div>
   </div>
 </section>
@@ -614,6 +625,11 @@
 
 <div class="mbar"><a class="btn btn-primary" href="audit/">Get My Free Audit</a></div>
 
+<dialog id="veraChat" aria-label="Chat with Vera">
+  <div class="chat-hd"><span>Chat with Vera</span><button type="button" class="chat-x" id="chatClose" aria-label="Close chat">&times;</button></div>
+  <iframe id="veraFrame" title="Chat with Vera, CallDirector AI's assistant" allow="microphone" loading="lazy"></iframe>
+</dialog>
+
 <script>
 (function () {
 
@@ -626,12 +642,14 @@
     auditDays: 5,               // stated audit turnaround, business days
     foundingSpots: 5,           // set 0 to hide the founding-client program
     foundingImplementation: 1500,
+    chatUrl: 'https://app.calldirector.ai/agents/3893022/embed', // Vera chat (supported embed)
+    sampleCall: { enabled: false, src: '/audio/vera-sample-call.mp3' }, // set enabled:true only when an approved recording exists
     testimonials: [],           // [{ quote, name, role, company, note }]  note e.g. 'Founding client'
     caseStudies: [],            // [{ company, trade, headline, metrics:[{label, before, after}] }]
     showProjects: true,
     projects: [
       { company: 'All Wheels Tag & Title', trade: 'Automotive services', location: 'Gaithersburg, MD', built: 'Website, an AI-answered business line, contact-form lead capture, and company email setup, maintained and improved month to month.', url: 'https://allwheelstagandtitle.com' },
-      { company: 'Trebor Financial Solutions', trade: 'Financial services', location: '', built: 'A review funnel that sends happy clients to Google, a digital business card with QR codes, and Google Business Profile setup.', url: 'https://treborfinancialsolutions.com' },
+      { company: 'Trebor Financial Solutions', trade: 'Financial services', location: '', built: 'A review-request funnel that invites clients to leave a Google review, a digital business card with QR codes, and Google Business Profile setup.', url: 'https://treborfinancialsolutions.com' },
       { company: 'Exclusive Interiors', trade: 'Interior design & contracting', location: '', built: 'A rebuilt website with reliable hosting and lead-notification email routing, giving the business an online presence for midsize and subcontract work alongside its larger contracts.', url: 'https://exclusive-interiors.com' },
       { company: 'Preferred Residential Group Home', trade: 'Youth residential care', location: 'Tolleson, AZ', built: 'A six-page website plus print flyers and site legal pages, maintained and updated as the organization grows.', url: 'https://preferredrh.com' }
     ]
@@ -664,6 +682,43 @@
     var lab = a.querySelector('[data-vera-label]');
     if (CONFIG.veraPhone) { a.setAttribute('href', tel(CONFIG.veraPhone)); if (lab) { lab.textContent = 'Hear Vera Answer Live'; } }
     else if (lab) { lab.textContent = 'Get a Vera demo'; }
+  });
+
+  /* chat with Vera: opens the supported chat embed in a dialog (loaded on first open) */
+  (function () {
+    var btn = document.getElementById('chatOpen'), dlg = document.getElementById('veraChat'),
+        frame = document.getElementById('veraFrame'), closeBtn = document.getElementById('chatClose');
+    if (!btn || !dlg || typeof dlg.showModal !== 'function') { if (btn) { btn.setAttribute('hidden', ''); } return; }
+    btn.addEventListener('click', function () {
+      if (!frame.getAttribute('src')) { frame.setAttribute('src', CONFIG.chatUrl); }
+      var tz = document.getElementById('vera-teaser'); if (tz) { tz.style.display = 'none'; }
+      dlg.showModal();
+      closeBtn.focus();
+    });
+    closeBtn.addEventListener('click', function () { dlg.close(); });
+    dlg.addEventListener('click', function (e) { if (e.target === dlg) { dlg.close(); } });
+  })();
+
+  /* sample call player: renders nothing unless an approved recording is enabled in CONFIG */
+  (function () {
+    var box = document.getElementById('sample-call');
+    if (!box || !CONFIG.sampleCall || !CONFIG.sampleCall.enabled || !CONFIG.sampleCall.src) { return; }
+    var p = document.createElement('p'); p.className = 'muted-d'; p.style.cssText = 'font-size:15px;margin-bottom:8px';
+    p.textContent = 'Hear a sample call \u2014 a recorded example of Vera answering a business call.';
+    var au = document.createElement('audio'); au.controls = true; au.preload = 'none'; au.src = CONFIG.sampleCall.src; au.style.cssText = 'width:100%;max-width:420px';
+    box.appendChild(p); box.appendChild(au);
+    box.removeAttribute('hidden');
+  })();
+
+  /* analytics events (Google tag already on the page): CTA, chat, call and callback clicks */
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest ? e.target.closest('a,button') : null;
+    if (!a || typeof gtag !== 'function') { return; }
+    var href = a.getAttribute('href') || '', label = (a.textContent || '').trim().slice(0, 60);
+    if (a.id === 'chatOpen') { gtag('event', 'chat_open', { location: 'hero' }); }
+    else if (href.indexOf('tel:') === 0) { gtag('event', 'demo_call_click', { label: label }); }
+    else if (/audit\/$/.test(href)) { gtag('event', 'audit_cta_click', { label: label }); }
+    else if (href.indexOf('/forms/') > -1) { gtag('event', 'callback_form_click', { label: label }); }
   });
 
   /* FAQ */
@@ -708,7 +763,15 @@
       var monthly = num(els[0]) * (num(els[1], 100) / 100) * (num(els[2], 100) / 100) * num(els[3]) * 52 / 12;
       m.textContent = fmt(monthly); y.textContent = fmt(monthly * 12);
     }
-    els.forEach(function (e) { e.addEventListener('input', calc); });
+    /* keep the visible input in step with what is calculated: no negatives, percentages capped at 100 */
+    function norm(el, max) {
+      var v = parseFloat(el.value);
+      if (isNaN(v)) { return; }
+      if (v < 0) { el.value = 0; } else if (max && v > max) { el.value = max; }
+    }
+    els.forEach(function (e, i) {
+      e.addEventListener('input', function () { norm(e, (i === 1 || i === 2) ? 100 : 0); calc(); });
+    });
     calc();
   })();
 
@@ -761,7 +824,14 @@
 (function(){
   var t = document.getElementById('vera-teaser');
   if (!t) { return; }
+  var dismissed = false;
+  /* dismiss the "Try me" tooltip after the first scroll */
+  window.addEventListener('scroll', function(){
+    if (dismissed || (window.scrollY || 0) < 40) { return; }
+    dismissed = true; t.style.display = 'none';
+  }, { passive: true });
   setTimeout(function(){
+    if (dismissed) { return; }
     t.style.display = 'block';
     requestAnimationFrame(function(){ t.style.opacity = '1'; t.style.transform = 'none'; });
   }, 2500);

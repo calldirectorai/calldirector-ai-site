@@ -584,7 +584,7 @@
   <div class="sec">
     <div class="wrap split" style="grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);align-items:start">
       <h2>Straight answers.</h2>
-              <div class="faq" data-faq><div class="q"><h3>Will it sound like a robot?</h3><p class="muted">Vera tells callers she is an AI assistant. We set her voice, script, and escalation rules with you, and you hear sample calls before anything goes live.</p></div><div class="q"><h3>What if it is an emergency or a call she can’t handle?</h3><p class="muted">We agree the rules with you up front: which calls go straight to a person, which take a message, and what Vera never answers on her own.</p></div><div class="q"><h3>Do you text my customers?</h3><p class="muted">Yes, with their consent. We register your business for compliant text messaging as part of setup, so replies land reliably instead of getting filtered by carriers as spam.</p></div><div class="q"><h3>How long does setup take?</h3><p class="muted">Most systems go live 2 to 3 weeks after kickoff, depending on how much of your current site and CRM we’re rebuilding versus building from scratch.</p></div><div class="q"><h3>Is there a contract?</h3><p class="muted">No long-term contract. A one-time setup or implementation fee gets your system built and live, then every plan runs month-to-month. Cancel with 30 days’ notice.</p></div></div>
+              <div class="faq" data-faq><details class="q"><summary>Will it sound like a robot?</summary><p class="muted">Vera tells callers she is an AI assistant. We set her voice, script, and escalation rules with you, and you hear sample calls before anything goes live.</p></details><details class="q"><summary>What if it is an emergency or a call she can’t handle?</summary><p class="muted">We agree the rules with you up front: which calls go straight to a person, which take a message, and what Vera never answers on her own.</p></details><details class="q"><summary>Do you text my customers?</summary><p class="muted">Yes, with their consent. We register your business for compliant text messaging as part of setup, so replies land reliably instead of getting filtered by carriers as spam.</p></details><details class="q"><summary>How long does setup take?</summary><p class="muted">Most systems go live 2 to 3 weeks after kickoff, depending on how much of your current site and CRM we’re rebuilding versus building from scratch.</p></details><details class="q"><summary>Is there a contract?</summary><p class="muted">No long-term contract. A one-time setup or implementation fee gets your system built and live, then every plan runs month-to-month. Cancel with 30 days’ notice.</p></details></div>
     </div>
   </div>
   <div class="sec cta">
@@ -725,7 +725,7 @@
 
   /* FAQ */
   document.querySelectorAll('[data-faq]').forEach(function (box) {
-    box.innerHTML = FAQ.map(function (f) { return '<div class="q"><h3>' + esc(f[0]) + '</h3><p class="muted">' + esc(f[1]) + '</p></div>'; }).join('');
+    box.innerHTML = FAQ.map(function (f) { return '<details class="q"><summary>' + esc(f[0]) + '</summary><p class="muted">' + esc(f[1]) + '</p></details>'; }).join('');
   });
 
   /* proof: real testimonials/case studies, else the founding-client message */

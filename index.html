@@ -644,7 +644,10 @@
     foundingImplementation: 1500,
     chatUrl: 'https://app.calldirector.ai/agents/3893022/embed', // Vera chat (supported embed)
     sampleCall: { enabled: false, src: '/audio/vera-sample-call.mp3' }, // set enabled:true only when an approved recording exists
-    testimonials: [],           // [{ quote, name, role, company, note }]  note e.g. 'Founding client'
+    testimonials: [
+      { quote: 'CallDirector AI built our website and printed materials and keeps them updated as we grow. They are responsive and easy to work with.', name: 'Preferred Residential Group Home', role: '', company: 'Youth residential care', note: '' },
+      { quote: 'CallDirector AI made it simple for us to ask clients for reviews and put our business card in their hands. They handled the setup and it just works.', name: 'Trebor Financial Solutions', role: '', company: 'Financial services', note: '' }
+    ],           // [{ quote, name, role, company, note }]  note e.g. 'Founding client'
     caseStudies: [],            // [{ company, trade, headline, metrics:[{label, before, after}] }]
     showProjects: true,
     projects: [

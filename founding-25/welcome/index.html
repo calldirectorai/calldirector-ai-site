@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
 <meta name="robots" content="noindex,nofollow">
-<meta name="theme-color" content="#0F172A">
+<meta name="theme-color" content="#FFFFFF">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -306,21 +306,21 @@
 </script>
 <link rel="stylesheet" href="/styles.css">
 </head>
-<body>
-<header><div class="hd">
+<body id="f25w">
+<div class="w-page">
+<div class="w-top"><a class="w-hd" href="https://calldirector.ai/">
 <svg width="30" height="24" viewBox="0 0 30 24" aria-hidden="true"><rect x="0" y="12" width="4" height="12" rx="2" fill="#8B5CF6"/><rect x="6.5" y="8" width="4" height="16" rx="2" fill="#8B5CF6"/><rect x="13" y="5" width="4" height="19" rx="2" fill="#7C3AED"/><rect x="19.5" y="2.5" width="4" height="21.5" rx="2" fill="#7C3AED"/><rect x="26" y="0" width="4" height="24" rx="2" fill="#F59E0B"/></svg>
-<span>CallDirector <b>AI</b></span></div></header>
+<span>CallDirector <b>AI</b></span></a></div>
 
-<main>
-<div class="top"><div class="wrap">
-  <span class="ok">✓ Payment received</span>
-  <h1>Your founding spot is locked in.</h1>
+<div class="w-hero"><div class="w-wrap">
+  <span class="w-ok">✓ Payment received</span>
+  <h1 class="w-h1">Your founding spot is locked in.</h1>
   <p>One last step: tell us about your practice. Your 7-day build starts the moment your intake comes in. We've also emailed you this link.</p>
 </div></div>
 
-<section><div class="wrap">
-  <h2>Have these ready (about 10 minutes)</h2>
-  <div class="ready">
+<div class="w-sec"><div class="w-wrap">
+  <h2 class="w-h2">Have these ready (about 10 minutes)</h2>
+  <div class="w-ready">
     <div><b>Your services and starting prices</b>For example, individual returns from $150.</div>
     <div><b>A few lines about you</b>Why clients trust you, in your own words.</div>
     <div><b>Your phone and booking link</b>The number clients should call, and your calendar link if you use one.</div>
@@ -328,29 +328,29 @@
     <div><b>Review and social links</b>Google review link, Facebook and Instagram pages.</div>
     <div><b>Your VIP perk</b>What VIPs get for joining, like an early-bird discount.</div>
   </div>
-  <p class="fine">Your photo and logo: reply to your welcome email with them attached.</p>
-</div></section>
+  <p class="w-fine">Your photo and logo: reply to your welcome email with them attached.</p>
+</div></div>
 
-<section style="padding-top:0"><div class="wrap">
-  <div class="formcard" id="ix">
-    <h2>Your intake form</h2>
-    <button type="button" class="btn" id="ix-open" aria-expanded="false" aria-controls="ix-panel">Start my intake</button>
-    <p id="ix-note" class="fine" role="status" aria-live="polite" hidden></p>
-    <div id="ix-panel" hidden><div id="ix-host"></div><p class="fine">Please don't send Social Security numbers or client information here.</p></div>
+<div class="w-sec" style="padding-top:0"><div class="w-wrap">
+  <div class="w-card" id="ix">
+    <h2 class="w-h2">Your intake form</h2>
+    <button type="button" class="w-btn" id="ix-open" aria-expanded="false" aria-controls="ix-panel">Start my intake</button>
+    <p id="ix-note" class="w-fine" role="status" aria-live="polite" hidden></p>
+    <div id="ix-panel" hidden><div id="ix-host"></div><p class="w-fine">Please don't send Social Security numbers or client information here.</p></div>
   </div>
-</div></section>
+</div></div>
 
-<section style="padding-top:0"><div class="wrap">
-  <h2>What happens next</h2>
-  <ol class="next">
+<div class="w-sec" style="padding-top:0"><div class="w-wrap">
+  <h2 class="w-h2">What happens next</h2>
+  <ol class="w-next">
     <li><b>We build your page</b> from your intake, within 7 days.</li>
     <li><b>You review it</b> and send any changes together in one round.</li>
     <li><b>You go live</b> and start collecting consultation requests and VIP sign-ups.</li>
   </ol>
-</div></section>
-</main>
+</div></div>
 
-<footer>Questions? Email <a href="mailto:hello@calldirector.ai">hello@calldirector.ai</a> · © 2026 CallDirector AI, LLC</footer>
+<div class="w-foot">Questions? Email <a href="mailto:hello@calldirector.ai">hello@calldirector.ai</a> · © 2026 CallDirector AI, LLC</div>
+</div>
 
 <script>
 (function(){
@@ -361,9 +361,8 @@ var bot=!!navigator.webdriver;
 function say(t,ms){note.textContent=t;note.hidden=!t;if(t&&ms){timers.push(setTimeout(function(){note.hidden=true;note.textContent=''},ms))}}
 function inject(){
   if(loaded||loading)return;
-  if(!CFG.INTAKE_FORM_ID){host.innerHTML='<p style="padding:14px 0;color:#475569">Preview: the intake form connects when this page is published.</p>';loaded=true;return}
   loading=true;var s=document.createElement('script');s.src='https://app.calldirector.ai/forms-embed.js';s.async=true;
-  s.setAttribute('data-form',CFG.INTAKE_FORM_ID);s.setAttribute('data-theme','light');s.setAttribute('data-accent','#7C3AED');
+  s.setAttribute('data-form',CFG.INTAKE_FORM_ID);s.setAttribute('data-theme','light');s.setAttribute('data-accent','#7C3AED');s.setAttribute('data-bg','#FFFFFF');
   s.onload=function(){loaded=true;loading=false};
   s.onerror=function(){loading=false;say('We could not load the form. Please email '+CFG.CONTACT+'.')};
   host.appendChild(s)}

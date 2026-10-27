@@ -45,7 +45,7 @@
 <script data-gate>
 (function(){
   var slug='lp-mvr3ampz-rsdby';var apiBase='https://app.calldirector.ai';var currency='USD';var presets=[29700];var minAmt=29700;var maxAmt=29700;var thankYouMsg='Your founding spot is locked in. Next: complete your intake so we can start building.';
-  var successSubtext='Your $297 setup payment went through. Continue to your intake form. We\'ve also emailed you the link.';var successBtnLabel='Start my intake';var successBtnColor='#F59E0B';var successRedirect='https://app.calldirector.ai/p/xGMd8utTm';
+  var successSubtext='Your $297 setup payment went through. Continue to your intake form. We\'ve also emailed you the link.';var successBtnLabel='Start my intake';var successBtnColor='#F59E0B';var successRedirect='https://calldirector.ai/founding-25/welcome/';
   function getLang(){var l=(document.documentElement.lang||navigator.language||'en').toLowerCase();return l.split('-')[0];}
   function getLocale(){return (document.documentElement.lang||navigator.language||'en');}
   var I18N={en:{min:'Minimum is ',max:'Maximum is ',emailPrompt:'Enter your email for the receipt:',emailRequired:'An email address is required to complete checkout.',failed:'Failed to process donation'},fr:{min:'Le minimum est ',max:'Le maximum est ',emailPrompt:'Entrez votre adresse e-mail pour le reçu :',emailRequired:'Une adresse e-mail est requise pour finaliser le paiement.',failed:'Échec du traitement du don'},es:{min:'El mínimo es ',max:'El máximo es ',emailPrompt:'Introduce tu correo electrónico para el recibo:',emailRequired:'Se requiere una dirección de correo electrónico para completar el pago.',failed:'No se pudo procesar la donación'},pt:{min:'O mínimo é ',max:'O máximo é ',emailPrompt:'Insira seu e-mail para o recibo:',emailRequired:'Um endereço de e-mail é necessário para concluir o pagamento.',failed:'Falha ao processar a doação'},de:{min:'Mindestbetrag ist ',max:'Höchstbetrag ist ',emailPrompt:'Geben Sie Ihre E-Mail-Adresse für die Quittung ein:',emailRequired:'Eine E-Mail-Adresse ist erforderlich, um den Checkout abzuschließen.',failed:'Spende konnte nicht verarbeitet werden'},it:{min:'Il minimo è ',max:'Il massimo è ',emailPrompt:'Inserisci la tua email per la ricevuta:',emailRequired:"È richiesto un indirizzo email per completare il pagamento.",failed:'Impossibile elaborare la donazione'}};
@@ -230,7 +230,7 @@
 (function(){
   var slug='M7Rx8KcGYa';
   var apiBase='https://app.calldirector.ai';
-  var successSubtext='Your $297 setup payment went through. Continue to your intake form. We\'ve also emailed you the link.';var successBtnLabel='Start my intake';var successBtnColor='#F59E0B';var successRedirect='https://app.calldirector.ai/p/xGMd8utTm';
+  var successSubtext='Your $297 setup payment went through. Continue to your intake form. We\'ve also emailed you the link.';var successBtnLabel='Start my intake';var successBtnColor='#F59E0B';var successRedirect='https://calldirector.ai/founding-25/welcome/';
   function findEmail(){
     var ids=['email','emailAddress','buyer-email','buyerEmail','user-email','userEmail','checkout-email','customer-email','contact-email'];
     for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.includes('@'))return el.value.trim();}
@@ -294,7 +294,7 @@
 (function(){
   var slug='M7Rx8KcGYa';
   var apiBase='https://app.calldirector.ai';
-  var successSubtext='Your $297 setup payment went through. Continue to your intake form. We\'ve also emailed you the link.';var successBtnLabel='Start my intake';var successBtnColor='#F59E0B';var successRedirect='https://app.calldirector.ai/p/xGMd8utTm';
+  var successSubtext='Your $297 setup payment went through. Continue to your intake form. We\'ve also emailed you the link.';var successBtnLabel='Start my intake';var successBtnColor='#F59E0B';var successRedirect='https://calldirector.ai/founding-25/welcome/';
   function findCartEmail(){
     var ids=['email','emailAddress','buyer-email','buyerEmail','user-email','userEmail','checkout-email','customer-email','contact-email'];
     for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.includes('@'))return el.value.trim();}
@@ -583,17 +583,22 @@
 
 <script>
 (function(){
-var CFG={FORM_ID:'ni58bnog',WIDGET_ID:'7633704',CONTACT:'hello@calldirector.ai'};
+var CFG={FORM_ID:'ni58bnog',WIDGET_ID:'7633704',CONTACT:'hello@calldirector.ai',APP_HOST:'app.calldirector.ai',SLUG:'M7Rx8KcGYa',APP_PAGE:'https://app.calldirector.ai/p/M7Rx8KcGYa',WELCOME:'https://calldirector.ai/founding-25/welcome/',PRODUCT:'Founding 25 Launch Page setup'};
 var payForm=document.getElementById('pay-form'),payBtn=document.getElementById('pay-btn'),payNote=document.getElementById('pay-note'),payEmail=document.getElementById('email');
 var payNoteDefault=payNote.textContent;
 payForm.addEventListener('submit',function(e){
   e.preventDefault();
   var v=(payEmail.value||'').trim();
   if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)){payNote.textContent='Enter a valid email to continue to checkout.';payEmail.focus();return}
-  if(typeof window.__processDonation!=='function'){payNote.textContent='Checkout is loading. Please try again in a moment, or email '+CFG.CONTACT+'.';return}
   payBtn.disabled=true;payNote.textContent='Opening secure checkout...';
-  try{window.__processDonation({amount:297,email:v})}catch(err){payBtn.disabled=false;payNote.textContent='We could not open checkout. Please email '+CFG.CONTACT+'.'}
-  setTimeout(function(){payBtn.disabled=false;payNote.textContent=payNoteDefault},8000)});
+  setTimeout(function(){payBtn.disabled=false;payNote.textContent=payNoteDefault},8000);
+  if(location.hostname===CFG.APP_HOST&&typeof window.__processDonation==='function'){
+    try{window.__processDonation({amount:297,email:v,productName:CFG.PRODUCT})}catch(err){location.href=CFG.APP_PAGE+'#start'}
+    return}
+  fetch('https://'+CFG.APP_HOST+'/api/landing-pages/public/'+CFG.SLUG+'/donation/checkout',{method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({email:v,name:'',phone:'',amountCents:29700,message:'',productName:CFG.PRODUCT,productDescription:'',quantity:1,successUrl:CFG.WELCOME,cancelUrl:location.href.split('#')[0].split('?')[0]+'#start'})})
+  .then(function(r){return r.json()}).then(function(d){if(d&&d.checkoutUrl){location.href=d.checkoutUrl}else{throw new Error('no url')}})
+  .catch(function(){location.href=CFG.APP_PAGE+'#start'})});
 payEmail.addEventListener('input',function(){if(payNote.textContent!==payNoteDefault&&!payBtn.disabled)payNote.textContent=payNoteDefault});
 var loaded=false,loading=false,t0=Date.now(),timers=[],armed=false;
 var open=document.getElementById('fx-open'),panel=document.getElementById('fx-panel'),host=document.getElementById('fx-host'),note=document.getElementById('fx-note');

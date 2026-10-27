@@ -1,0 +1,630 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+
+<meta name="theme-color" content="#0F172A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+<!-- SEO Meta Tags -->
+<title>Founding 25 for Tax Pros | CallDirector AI</title>
+<meta name="description" content="A landing page built to turn tax-season visitors into booked calls. VIP client list built in. Founding price for 25 tax professionals: $297 setup plus $49 a month." />
+<meta property="og:title" content="Founding 25 for Tax Pros | CallDirector AI" />
+<meta property="og:description" content="A landing page built to turn tax-season visitors into booked calls. VIP client list built in. Founding price for 25 tax professionals: $297 setup plus $49 a month." />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Founding 25 for Tax Pros | CallDirector AI" />
+<meta name="twitter:description" content="A landing page built to turn tax-season visitors into booked calls. VIP client list built in. Founding price for 25 tax professionals: $297 setup plus $49 a month." />
+<!-- End SEO Meta Tags -->
+<script data-lp-token-hydrate>
+(function(){try{
+  var slug="lp-mvr3ampz-rsdby";
+  var SITEK="";
+  var SK='lp_access_'+slug;
+  var map={access_token:'lp_pw_',allowlist_access_token:'lp_al_',pin_access_token:'lp_pin_',paywall_access_token:'lp_paid_'};
+  function siteTok(){try{return SITEK?localStorage.getItem(SITEK):null;}catch(e){return null;}}
+  var u=new URL(location.href);var found=null;var changed=false;
+  var PINP=true;
+  if(!PINP){try{localStorage.removeItem('lp_pin_'+slug);if(SITEK)localStorage.removeItem(SITEK);}catch(e){}}
+  Object.keys(map).forEach(function(p){var v=u.searchParams.get(p);if(v){found=v;try{if(PINP||p!=='pin_access_token'){localStorage.setItem(map[p]+slug,v);if(SITEK&&p==='pin_access_token')localStorage.setItem(SITEK,v);}}catch(e){}if(p==='pin_access_token'){try{sessionStorage.setItem('lp_fresh_'+slug,'1');}catch(e){}}u.searchParams.delete(p);changed=true;}});
+  if(found){try{sessionStorage.setItem(SK,found);}catch(e){}}
+  else{try{if(!sessionStorage.getItem(SK)){var t=localStorage.getItem('lp_pw_'+slug)||localStorage.getItem('lp_al_'+slug)||localStorage.getItem('lp_pin_'+slug)||localStorage.getItem('lp_paid_'+slug)||siteTok();if(t)sessionStorage.setItem(SK,t);}}catch(e){}}
+  if(changed){try{history.replaceState(null,'',u.toString());}catch(e){}}
+  function getTok(){try{return sessionStorage.getItem(SK)||localStorage.getItem('lp_pw_'+slug)||localStorage.getItem('lp_al_'+slug)||localStorage.getItem('lp_pin_'+slug)||localStorage.getItem('lp_paid_'+slug)||siteTok();}catch(e){return null;}}
+  function needsToken(url,method){if(!url)return false;var s=String(url);var m=(method||'GET').toUpperCase();var isSheetWrite=(m==='POST'||m==='PATCH'||m==='PUT'||m==='DELETE')&&/\/sheet-rows(\/|$|\?)/.test(s);var isSheetRead=/\/sheet-data(\/|$|\?)/.test(s);var isLlm=/\/api\/landing-pages\/public\/[^/]+\/(llm|llm-config)(\/|$|\?)/.test(s);return isSheetWrite||isSheetRead||isLlm;}
+  if(window.fetch){var _f=window.fetch;window.fetch=function(input,init){try{var url=typeof input==='string'?input:(input&&input.url)||'';var method=(init&&init.method)||(input&&input.method)||'GET';if(needsToken(url,method)){var tok=getTok();if(tok){init=init||{};var h=new Headers(init.headers||(typeof input!=='string'?input.headers:undefined)||{});if(!h.has('X-Landing-Page-Token'))h.set('X-Landing-Page-Token',tok);init.headers=h;}}}catch(e){}return _f.call(this,input,init);};}
+  if(window.XMLHttpRequest){var _o=XMLHttpRequest.prototype.open;var _s=XMLHttpRequest.prototype.send;XMLHttpRequest.prototype.open=function(m,u){this.__lpM=m;this.__lpU=u;return _o.apply(this,arguments);};XMLHttpRequest.prototype.send=function(){try{if(needsToken(this.__lpU,this.__lpM)){var tok=getTok();if(tok)this.setRequestHeader('X-Landing-Page-Token',tok);}}catch(e){}return _s.apply(this,arguments);};}
+}catch(e){}})();
+</script>
+
+<script data-gate>
+(function(){
+  var slug='lp-mvr3ampz-rsdby';var apiBase='https://app.calldirector.ai';var currency='USD';var presets=[29700];var minAmt=29700;var maxAmt=29700;var thankYouMsg='Your founding spot is locked in. Next: complete your intake so we can start building.';
+  var successSubtext='Your $297 setup payment went through. Continue to your intake form. We\'ve also emailed you the link.';var successBtnLabel='Start my intake';var successBtnColor='#F59E0B';var successRedirect='https://app.calldirector.ai/p/xGMd8utTm';
+  function getLang(){var l=(document.documentElement.lang||navigator.language||'en').toLowerCase();return l.split('-')[0];}
+  function getLocale(){return (document.documentElement.lang||navigator.language||'en');}
+  var I18N={en:{min:'Minimum is ',max:'Maximum is ',emailPrompt:'Enter your email for the receipt:',emailRequired:'An email address is required to complete checkout.',failed:'Failed to process donation'},fr:{min:'Le minimum est ',max:'Le maximum est ',emailPrompt:'Entrez votre adresse e-mail pour le reçu :',emailRequired:'Une adresse e-mail est requise pour finaliser le paiement.',failed:'Échec du traitement du don'},es:{min:'El mínimo es ',max:'El máximo es ',emailPrompt:'Introduce tu correo electrónico para el recibo:',emailRequired:'Se requiere una dirección de correo electrónico para completar el pago.',failed:'No se pudo procesar la donación'},pt:{min:'O mínimo é ',max:'O máximo é ',emailPrompt:'Insira seu e-mail para o recibo:',emailRequired:'Um endereço de e-mail é necessário para concluir o pagamento.',failed:'Falha ao processar a doação'},de:{min:'Mindestbetrag ist ',max:'Höchstbetrag ist ',emailPrompt:'Geben Sie Ihre E-Mail-Adresse für die Quittung ein:',emailRequired:'Eine E-Mail-Adresse ist erforderlich, um den Checkout abzuschließen.',failed:'Spende konnte nicht verarbeitet werden'},it:{min:'Il minimo è ',max:'Il massimo è ',emailPrompt:'Inserisci la tua email per la ricevuta:',emailRequired:"È richiesto un indirizzo email per completare il pagamento.",failed:'Impossibile elaborare la donazione'}};
+  function t(k){var L=getLang();return (I18N[L]&&I18N[L][k])||I18N.en[k];}
+  function fmtD(c){try{return new Intl.NumberFormat(getLocale(),{style:'currency',currency:currency}).format(c/100);}catch(e){return new Intl.NumberFormat('en-US',{style:'currency',currency:currency}).format(c/100);}}
+  function findDonEmail(){var ids=['email','emailAddress','buyer-email','buyerEmail','donor-email','donorEmail','user-email','userEmail','contact-email'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.indexOf('@')>-1)return el.value.trim();}var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.indexOf('@')>-1)return inputs[j].value.trim();}return '';}
+  function findDonName(){var ids=['name','fullName','full-name','donor-name','donorName','customer-name','user-name'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"])');for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}return '';}
+  function findDonPhone(){var ids=['phone','phoneNumber','phone-number','tel','telephone','mobile','mobileNumber','cell','contact-phone','buyer-phone'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.trim())return el.value.trim();}var inputs=document.querySelectorAll('input[type="tel"],input[name*="phone"],input[name*="tel"],input[name*="mobile"],input[placeholder*="phone"],input[placeholder*="Phone"]');for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.trim())return inputs[j].value.trim();}return '';}
+  window.__processDonation=function(a,b,c,d){
+    var amountCents,email='',donorName='',donorMessage='',productName='',productDescription='',quantity=1;
+    if(a&&typeof a==='object'){
+      amountCents=a.amountCents||(a.amount?Math.round(Number(a.amount)*100):0);
+      email=a.email||'';
+      productName=a.productName||a.label||'';
+      productDescription=a.productDescription||a.description||'';
+      donorName=a.name||a.donorName||'';
+      donorMessage=a.message||a.donorMessage||'';
+      quantity=a.quantity&&parseInt(a.quantity,10)>0?parseInt(a.quantity,10):1;
+    }else{
+      amountCents=typeof a==='number'?a:(parseInt(a,10)||0);
+      var rest=[b,c,d];var nonEmail=[];
+      for(var i=0;i<rest.length;i++){var v=rest[i];if(typeof v==='string'&&v){if(!email&&v.indexOf('@')>-1&&/^[^s@]+@[^s@]+.[^s@]+$/.test(v.trim())){email=v.trim();}else{nonEmail.push(v);}}}
+      donorName=nonEmail[0]||'';donorMessage=nonEmail[1]||'';
+    }
+    if(!email)email=findDonEmail();
+    if(!donorName)donorName=findDonName();
+    var donorPhone=findDonPhone();
+    if(!amountCents||amountCents<minAmt){alert(t('min')+fmtD(minAmt));return Promise.reject('below_min');}
+    if(amountCents>maxAmt){alert(t('max')+fmtD(maxAmt));return Promise.reject('above_max');}
+    if(!email){var p=window.prompt(t('emailPrompt'),'');if(p&&p.indexOf('@')>-1){email=p.trim();}else{alert(t('emailRequired'));return Promise.reject('no_email');}}
+    var successBase=window.location.href.split('?')[0];
+    return fetch(apiBase+'/api/landing-pages/public/'+slug+'/donation/checkout',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({email:email,name:donorName||'',phone:donorPhone||'',amountCents:amountCents,message:donorMessage||'',productName:productName||'',productDescription:productDescription||'',quantity:quantity,locale:getLocale(),successUrl:successBase+'?donation=success&email='+encodeURIComponent(email)+'&session_id={CHECKOUT_SESSION_ID}',cancelUrl:successBase+'?donation=cancelled'})
+    }).then(function(r){return r.json();}).then(function(d){
+      if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
+      else{alert(d.error||t('failed'));throw new Error(d.error);}
+    });
+  };
+  window.__donationConfig={currency:currency,presets:presets.map(function(c){return c/100;}),minAmount:minAmt/100,maxAmount:maxAmt/100,formatAmount:fmtD};
+  document.addEventListener('DOMContentLoaded',function(){
+    var urlParams=new URLSearchParams(window.location.search);
+    if(urlParams.get('donation')==='success'){
+      var sidD=urlParams.get('session_id');
+      if(sidD){try{fetch(apiBase+'/api/landing-pages/public/'+slug+'/checkout/confirm',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({sessionId:sidD})}).catch(function(){});}catch(e){}}
+      var overlay=document.createElement('div');overlay.id='donation-success-overlay';
+      overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
+      function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;background:color-mix(in srgb,'+successBtnColor+' 12%,white);margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="'+successBtnColor+'" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">'+esc(thankYouMsg)+'</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(successSubtext)+'</p><button id="lp-don-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      document.body.appendChild(overlay);
+      var dBtn=document.getElementById('lp-don-success-btn');
+      if(dBtn){dBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
+    }
+  });
+})();
+</script>
+<script data-field-replace>
+(function(){
+  var params=new URLSearchParams(window.location.search);
+  var fields={};
+  var paramMap={
+    'first_name':'firstName','last_name':'lastName','full_name':'fullName',
+    'email':'email','phone':'phone','company':'company',
+    'city':'city','state':'state','country':'country'
+  };
+  var skipTags={'SCRIPT':1,'STYLE':1,'NOSCRIPT':1,'TEXTAREA':1,'CODE':1,'PRE':1};
+  var hasUrlFields=false;
+  for(var p in paramMap){
+    var v=params.get(p);
+    if(v){fields[paramMap[p]]=v;hasUrlFields=true;}
+  }
+  var contactId=params.get('contact_id');
+  function esc(s){
+    if(!s)return s;
+    var d=document.createElement('div');
+    d.appendChild(document.createTextNode(s));
+    return d.innerHTML;
+  }
+  function doReplace(data){
+    var r={};
+    r['{{full_name}}']=esc(((data.firstName||'')+' '+(data.lastName||'')).trim()||((data.fullName||data.name)||''));
+    r['{{first_name}}']=esc(data.firstName||(data.name?data.name.split(' ')[0]:'')||'');
+    r['{{last_name}}']=esc(data.lastName||(data.name&&data.name.indexOf(' ')>-1?data.name.substring(data.name.indexOf(' ')+1):'')||'');
+    r['{{email}}']=esc(data.email||'');
+    r['{{phone}}']=esc(data.phone||'');
+    r['{{company}}']=esc(data.company||'');
+    r['{{city}}']=esc(data.city||'');
+    r['{{state}}']=esc(data.state||'');
+    r['{{country}}']=esc(data.country||'');
+    r['{{date}}']=new Date().toLocaleDateString();
+    r['{{time}}']=new Date().toLocaleTimeString();
+    r['{{location}}']=[data.city,data.state,data.country].filter(Boolean).join(', ');
+    r['{{tracking_id}}']=esc(data.trackingId||'');
+    r['{{lastClickedProduct}}']=esc(data.lastClickedProduct||'');
+    r['{{lastProductClickDate}}']=esc(data.lastProductClickDate||'');
+    r['{{lastClickedProductPrice}}']=esc(data.lastClickedProductPrice||'');
+    r['{{lastClickedProductURL}}']=esc(data.lastClickedProductURL||'');
+    r['{{productsClickedCount}}']=esc(data.productsClickedCount||'0');
+    r['{{ip_address}}']=esc(data.ipAddress||'');
+    r['{{ip}}']=esc(data.ipAddress||'');
+    if(data.customFields){
+      for(var k in data.customFields){
+        r['{{'+k+'}}']=esc(String(data.customFields[k]||''));
+      }
+    }
+    params.forEach(function(v,k){
+      if(!paramMap[k]&&k!=='contact_id'&&k!=='page_id'&&k.indexOf('utm_')!==0){
+        r['{{'+k+'}}']=esc(v);
+      }
+    });
+    var hasValues=false;
+    for(var key in r){if(r[key]){hasValues=true;break;}}
+    if(!hasValues)return;
+    var walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{
+      acceptNode:function(n){
+        var p=n.parentNode;
+        if(p&&skipTags[p.nodeName])return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var node;
+    while(node=walker.nextNode()){
+      var txt=node.nodeValue;
+      if(txt&&txt.indexOf('{{')>-1){
+        var changed=txt;
+        for(var ph in r){
+          if(r[ph]&&changed.indexOf(ph)>-1){
+            changed=changed.split(ph).join(r[ph]);
+          }
+        }
+        if(changed!==txt)node.nodeValue=changed;
+      }
+    }
+    var attrs=['value','placeholder','content','alt','title'];
+    attrs.forEach(function(attr){
+      var els=document.querySelectorAll('['+attr+'*="{{"]');
+      for(var i=0;i<els.length;i++){
+        var tag=els[i].tagName;
+        if(skipTags[tag])continue;
+        var val=els[i].getAttribute(attr);
+        if(val){
+          var nv=val;
+          for(var ph in r){
+            if(r[ph]&&nv.indexOf(ph)>-1){
+              nv=nv.split(ph).join(r[ph]);
+            }
+          }
+          if(nv!==val)els[i].setAttribute(attr,nv);
+        }
+      }
+    });
+  }
+  function run(){
+    if(contactId){
+      var xhr=new XMLHttpRequest();
+      xhr.open('GET','https://app.calldirector.ai/api/landing/context/'+encodeURIComponent(contactId)+'?page_id=8659');
+      xhr.onload=function(){
+        if(xhr.status===200){
+          try{
+            var resp=JSON.parse(xhr.responseText);
+            if(resp.success&&resp.contact){
+              var merged=resp.contact;
+              for(var k in fields){merged[k]=fields[k];}
+              doReplace(merged);
+              return;
+            }
+          }catch(e){}
+        }
+        if(hasUrlFields)doReplace(fields);
+      };
+      xhr.onerror=function(){if(hasUrlFields)doReplace(fields);};
+      xhr.send();
+    }else if(hasUrlFields){
+      doReplace(fields);
+    }
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}
+  else{run();}
+})();
+</script>
+<script data-payment>
+(function(){
+  var slug='M7Rx8KcGYa';
+  var apiBase='https://app.calldirector.ai';
+  var successSubtext='Your $297 setup payment went through. Continue to your intake form. We\'ve also emailed you the link.';var successBtnLabel='Start my intake';var successBtnColor='#F59E0B';var successRedirect='https://app.calldirector.ai/p/xGMd8utTm';
+  function findEmail(){
+    var ids=['email','emailAddress','buyer-email','buyerEmail','user-email','userEmail','checkout-email','customer-email','contact-email'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.includes('@'))return el.value.trim();}
+    var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.includes('@'))return inputs[j].value.trim();}
+    return '';
+  }
+  function findName(){
+    var ids=['name','fullName','full-name','buyer-name','buyerName','customer-name','userName','user-name'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}
+    var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"]),input[placeholder*="Name"]:not([type="email"])');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}
+    return '';
+  }
+  function findPhone(){var ids=['phone','phoneNumber','phone-number','tel','telephone','mobile','mobileNumber','cell','contact-phone','buyer-phone'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.trim())return el.value.trim();}var inputs=document.querySelectorAll('input[type="tel"],input[name*="phone"],input[name*="tel"],input[name*="mobile"],input[placeholder*="phone"],input[placeholder*="Phone"]');for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.trim())return inputs[j].value.trim();}return '';}
+  var __realProcessPayment=function(a,b,c,d,e){
+    var amountCents,email,productName,productDescription,customerName,quantity;
+    if(a&&typeof a==='object'){
+      amountCents=a.amountCents;email=a.email;productName=a.productName;
+      productDescription=a.productDescription||'';customerName=a.name||'';quantity=a.quantity||1;
+    }else{
+      amountCents=typeof a==='number'?a:0;productName=typeof b==='string'?b:'';
+      productDescription=typeof c==='string'?c:'';email='';customerName='';quantity=1;
+    }
+    if(!email)email=findEmail();
+    if(!customerName)customerName=findName();
+    var phone=findPhone();
+    if(!productName){alert('Product name is required.');return Promise.reject('no_product_name');}
+    if(!amountCents||amountCents<100){alert('Amount must be at least $1.00');return Promise.reject('invalid_amount');}
+    if(!email){alert('Please enter your email address.');return Promise.reject('no_email');}
+    var successBase=window.location.href.split('?')[0];
+    var __pLoc=(document.documentElement.lang||navigator.language||'en');
+    return fetch(apiBase+'/api/landing-pages/public/'+slug+'/payment/checkout',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({email:email,name:customerName,phone:phone||'',amountCents:amountCents,productName:productName,productDescription:productDescription,quantity:quantity,locale:__pLoc,successUrl:successBase+'?payment=success&product='+encodeURIComponent(productName)+'&session_id={CHECKOUT_SESSION_ID}',cancelUrl:successBase+'?payment=cancelled'})
+    }).then(function(r){return r.json();}).then(function(d){
+      if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
+      else{alert(d.error||'Failed to process payment');throw new Error(d.error);}
+    });
+  };
+  Object.defineProperty(window,'__processPayment',{value:__realProcessPayment,writable:false,configurable:false});
+  document.addEventListener('DOMContentLoaded',function(){
+    var urlParams=new URLSearchParams(window.location.search);
+    if(urlParams.get('payment')==='success'){
+      var sidP=urlParams.get('session_id');
+      if(sidP){try{fetch(apiBase+'/api/landing-pages/public/'+slug+'/checkout/confirm',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({sessionId:sidP})}).catch(function(){});}catch(e){}}
+      var pName=urlParams.get('product')||'your item';
+      var overlay=document.createElement('div');overlay.id='payment-success-overlay';
+      overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
+      function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+      var subTxt=successSubtext||('Thank you for purchasing '+pName+'.');
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;background:color-mix(in srgb,'+successBtnColor+' 12%,white);margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="'+successBtnColor+'" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Payment Successful!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-pay-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      document.body.appendChild(overlay);
+      var pBtn=document.getElementById('lp-pay-success-btn');
+      if(pBtn){pBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
+    }
+  });
+})();
+</script>
+<script data-cart>
+(function(){
+  var slug='M7Rx8KcGYa';
+  var apiBase='https://app.calldirector.ai';
+  var successSubtext='Your $297 setup payment went through. Continue to your intake form. We\'ve also emailed you the link.';var successBtnLabel='Start my intake';var successBtnColor='#F59E0B';var successRedirect='https://app.calldirector.ai/p/xGMd8utTm';
+  function findCartEmail(){
+    var ids=['email','emailAddress','buyer-email','buyerEmail','user-email','userEmail','checkout-email','customer-email','contact-email'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.includes('@'))return el.value.trim();}
+    var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.includes('@'))return inputs[j].value.trim();}
+    return '';
+  }
+  function findCartName(){
+    var ids=['name','fullName','full-name','buyer-name','buyerName','customer-name','userName','user-name'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}
+    var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"]),input[placeholder*="Name"]:not([type="email"])');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}
+    return '';
+  }
+  function findCartPhone(){var ids=['phone','phoneNumber','phone-number','tel','telephone','mobile','mobileNumber','cell','contact-phone','buyer-phone'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.trim())return el.value.trim();}var inputs=document.querySelectorAll('input[type="tel"],input[name*="phone"],input[name*="tel"],input[name*="mobile"],input[placeholder*="phone"],input[placeholder*="Phone"]');for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.trim())return inputs[j].value.trim();}return '';}
+  var __realCart=function(arg){
+    var items, email='', customerName='', successUrl, cancelUrl, currency;
+    if(Array.isArray(arg)){items=arg;}
+    else if(arg&&typeof arg==='object'){
+      items=arg.items;email=arg.email||'';customerName=arg.name||arg.customerName||'';
+      successUrl=arg.successUrl;cancelUrl=arg.cancelUrl;currency=arg.currency;
+    }
+    if(!Array.isArray(items)||items.length===0){alert('No items in cart.');return Promise.reject('no_items');}
+    var cleanItems=[];var totalCents=0;
+    for(var i=0;i<items.length;i++){
+      var it=items[i];if(!it||typeof it!=='object'){alert('Invalid item at position '+i);return Promise.reject('bad_item');}
+      var nm=typeof it.name==='string'?it.name.trim():'';
+      if(!nm){alert('Item '+(i+1)+' is missing a name.');return Promise.reject('no_name');}
+      var amt=typeof it.amountCents==='number'?it.amountCents:(typeof it.amount==='number'?Math.round(it.amount*100):NaN);
+      if(!isFinite(amt)||amt<1){alert('Item "'+nm+'" needs a valid amount in cents.');return Promise.reject('bad_amount');}
+      var qty=(typeof it.quantity==='number'&&it.quantity>0)?Math.floor(it.quantity):1;
+      cleanItems.push({name:nm,description:it.description||'',amountCents:amt,quantity:qty});
+      totalCents+=amt*qty;
+    }
+    if(totalCents<50){alert('Cart total must be at least $0.50');return Promise.reject('total_too_low');}
+    if(!email)email=findCartEmail();
+    if(!customerName)customerName=findCartName();
+    var cartPhone=findCartPhone();
+    if(!email){var p=window.prompt('Enter your email for the receipt:','');if(p&&p.indexOf('@')>-1){email=p.trim();}else{alert('An email address is required to complete checkout.');return Promise.reject('no_email');}}
+    var successBase=window.location.href.split('?')[0];
+    var body={email:email,name:customerName,items:cleanItems,locale:(document.documentElement.lang||navigator.language||'en')};
+    if(currency)body.currency=currency;
+    if(cartPhone)body.phone=cartPhone;
+    body.successUrl=successUrl||(successBase+'?cart=success&email='+encodeURIComponent(email)+'&session_id={CHECKOUT_SESSION_ID}');
+    body.cancelUrl=cancelUrl||(successBase+'?cart=cancelled');
+    return fetch(apiBase+'/api/landing-pages/public/'+slug+'/cart/checkout',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify(body)
+    }).then(function(r){return r.json();}).then(function(d){
+      if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
+      else{alert(d.error||'Failed to process checkout');throw new Error(d.error);}
+    });
+  };
+  try{Object.defineProperty(window,'__processCart',{value:__realCart,writable:false,configurable:false});}catch(e){window.__processCart=__realCart;}
+  document.addEventListener('DOMContentLoaded',function(){
+    var urlParams=new URLSearchParams(window.location.search);
+    if(urlParams.get('cart')==='success'){
+      var sidC=urlParams.get('session_id');
+      if(sidC){try{fetch(apiBase+'/api/landing-pages/public/'+slug+'/checkout/confirm',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({sessionId:sidC})}).catch(function(){});}catch(e){}}
+      if(document.getElementById('payment-success-overlay')||document.getElementById('donation-success-overlay')||document.getElementById('cart-success-overlay'))return;
+      var overlay=document.createElement('div');overlay.id='cart-success-overlay';
+      overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
+      function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+      var subTxt=successSubtext||'Thank you for your order.';
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;background:color-mix(in srgb,'+successBtnColor+' 12%,white);margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="'+successBtnColor+'" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Order Confirmed!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-cart-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      document.body.appendChild(overlay);
+      var cBtn=document.getElementById('lp-cart-success-btn');
+      if(cBtn){cBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
+    }
+  });
+})();
+</script>
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<header>
+  <div class="hd">
+    <a class="logo" href="https://calldirector.ai/" aria-label="CallDirector AI home">
+      <svg width="30" height="24" viewBox="0 0 30 24" aria-hidden="true"><rect x="0" y="12" width="4" height="12" rx="2" fill="#8B5CF6"/><rect x="6.5" y="8" width="4" height="16" rx="2" fill="#8B5CF6"/><rect x="13" y="5" width="4" height="19" rx="2" fill="#7C3AED"/><rect x="19.5" y="2.5" width="4" height="21.5" rx="2" fill="#7C3AED"/><rect x="26" y="0" width="4" height="24" rx="2" fill="#F59E0B"/></svg>
+      <span>CallDirector <b>AI</b></span>
+    </a>
+    <a class="hd-cta" href="#start">Claim my spot</a>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" data-section="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Founding 25 · For tax professionals</span>
+      <h1>A landing page that turns tax-season visitors into <em>booked calls.</em></h1>
+      <p class="sub">The same landing page structure that has tax pros reaching out to Bright Seal Tax, built for your practice with your name, your photo and your services.</p>
+      <div class="price"><s>$697</s><span class="now">$297</span><span class="mo">setup + $49/mo</span></div>
+      <p class="price-note">Founding price for the first 25 tax professionals only.</p>
+      <div class="cta-row">
+        <a class="btn btn-gold" href="#start">Claim my founding spot</a>
+        <a class="btn btn-ghost" href="https://brightsealtax.com/go/" target="_blank" rel="noopener">See a live example ↗</a>
+      </div>
+      <ul class="trust">
+        <li>Live within 7 days of your intake</li>
+        <li>One revision round included</li>
+        <li>VIP client list built in</li>
+        <li>Month-to-month</li>
+      </ul>
+    </div>
+    <div>
+      <div class="phone" aria-hidden="true">
+        <div class="screen">
+          <div class="sc-bar"><span class="sc-brand"><i>$</i> BRIGHT SEAL TAX</span><span class="sc-pill">Call</span></div>
+          <div class="sc-body">
+            <div class="sc-tag">Tax · Credit · Notary</div>
+            <div class="sc-h">Taxes done right. Credit back on track.</div>
+            <div class="sc-p">Behind on filings or nervous about a notice? We walk through it with you in plain language.</div>
+            <div class="sc-btn">Request my free consultation</div>
+            <div class="sc-btn2">Call (888) 561-7443</div>
+            <div class="sc-fine">Free 15-minute call · No obligation</div>
+          </div>
+          <div class="sc-cards"><div>Tax prep</div><div>Credit</div><div>Notary</div></div>
+          <div class="sc-chat">Hi, ask me anything</div>
+        </div>
+      </div>
+      <p class="phone-cap">Live example, shown with add-ons: <a href="https://brightsealtax.com/go/" target="_blank" rel="noopener">brightsealtax.com/go ↗</a></p>
+    </div>
+  </div>
+</section>
+
+<section data-section="proof">
+  <div class="wrap">
+    <span class="eyebrow">Why it converts</span>
+    <h2>What the Bright Seal page does right</h2>
+    <p class="lede">Every Launch Page starts from this same structure. Items marked <span class="addon" style="margin:0">Add-on</span> come with an upgrade.</p>
+    <div class="proof-grid">
+      <div class="mark ok"><span class="ic">✓</span><div><h3>One clear goal</h3><p>Every button asks for the same thing: a free 15-minute consultation. Visitors never wonder what to do next.</p></div></div>
+      <div class="mark ok"><span class="ic">✓</span><div><h3>Fast on a phone <span class="stat">1.2 s</span></h3><p>Most tax clients find you on their phone. The page is up before they lose interest.</p></div></div>
+      <div class="mark ok"><span class="ic">✓</span><div><h3>Nobody leaves the page</h3><p>Calling or requesting a consultation happens right there, with no detour to another website.</p></div></div>
+      <div class="mark ok"><span class="ic">✓</span><div><h3>Answers at 11 p.m. <span class="addon">Add-on</span></h3><p>A chat assistant answers questions any time, and missed calls get a text back right away.</p></div></div>
+      <div class="mark ok"><span class="ic">✓</span><div><h3>A price to anchor on</h3><p>"Individual returns start at $150" answers the first question before anyone has to ask it.</p></div></div>
+      <div class="mark ok"><span class="ic">✓</span><div><h3>Speaks to the fear</h3><p>Behind on filings, worried about a notice: it names the worry and promises no judgment.</p></div></div>
+      <div class="mark ok"><span class="ic">✓</span><div><h3>Works for referrals too</h3><p>A short section for fellow tax pros makes it easy to send over clients who need more than a return.</p></div></div>
+      <div class="mark ok"><span class="ic">✓</span><div><h3>Reviews one tap away</h3><p>Google and Facebook review links turn happy clients into proof for the next visitor.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" data-section="pitfalls">
+  <div class="wrap">
+    <span class="eyebrow">Where most tax pages lose clients</span>
+    <h2>Busy pages look impressive and book fewer calls</h2>
+    <p class="lede">These are the patterns we see most often. Your Launch Page fixes them out of the box, except after-hours replies, which come with an add-on.</p>
+    <div class="proof-grid">
+      <div class="mark no"><span class="ic">✕</span><div><h3>Too many choices</h3><p>Six or seven buttons pulling in different directions. When everything is asked for, many visitors do nothing.</p></div></div>
+      <div class="mark no"><span class="ic">✕</span><div><h3>Slow on a phone <span class="stat bad">7+ s</span></h3><p>Heavy pages can take seven seconds or more to show up on mobile. Many people leave before then.</p></div></div>
+      <div class="mark no"><span class="ic">✕</span><div><h3>Sent off to other websites</h3><p>Booking, sign-up lists and forms that open somewhere else. Every extra hop loses people.</p></div></div>
+      <div class="mark no"><span class="ic">✕</span><div><h3>Silence after hours <span class="addon">Add-on fixes</span></h3><p>A 9 p.m. visitor fills in a form and waits until morning. By then they may have booked someone else.</p></div></div>
+      <div class="mark no"><span class="ic">✕</span><div><h3>No idea what it costs</h3><p>With no starting price, visitors assume it's expensive and keep shopping.</p></div></div>
+      <div class="mark no"><span class="ic">✕</span><div><h3>No proof from real clients</h3><p>No reviews and no easy way to leave one. Trust has to be earned from scratch every time.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section data-section="included">
+  <div class="wrap">
+    <span class="eyebrow">Your Launch Page</span>
+    <h2>Everything included for $297 + $49/mo</h2>
+    <div class="incl">
+      <div class="inc"><h3>Your page, your brand</h3><p>Your name, photo, logo, services and prices on the proven layout.</p></div>
+      <div class="inc"><h3>Consultation request form</h3><p>Built-in spam protection and an instant email alert for every real request.</p></div>
+      <div class="inc"><h3>Your VIP client list</h3><p>Collect sign-ups for next season right on your page, then tell them all the day booking opens.</p></div>
+      <div class="inc"><h3>Your booking link</h3><p>Let clients pick their own time, or call you directly.</p></div>
+      <div class="inc"><h3>Review links</h3><p>Google and Facebook review buttons to collect proof all season.</p></div>
+      <div class="inc"><h3>Hosting and small edits</h3><p>We keep it running, plus one small change a month after launch.</p></div>
+    </div>
+    <p class="not-incl"><b>Not included in the Launch Page:</b> the AI phone receptionist, chat assistant, missed-call text-back and social media management. Those are add-ons you can turn on anytime.</p>
+  </div>
+</section>
+
+<section class="vip" data-section="vip">
+  <div class="wrap vip-grid">
+    <div>
+      <span class="eyebrow">Built in · Your VIP list</span>
+      <h2>Your trainer told you to build a VIP list. <em>It's already on your page.</em></h2>
+      <p class="lede">The clients who sign up before the season are the ones who book first. Your page collects them all year, on your own page, so they never get sent off to another website.</p>
+      <ul class="vip-list">
+        <li><b>Sign up in seconds.</b> Name, phone and email, protected from spam bots.</li>
+        <li><b>A perk that gets them to join.</b> You choose it, like an early-bird discount or first pick of appointments.</li>
+        <li><b>Instant welcome.</b> Each new VIP gets a thank-you email right away, and you get an alert.</li>
+        <li><b>One message when booking opens.</b> We send your whole list the news the day your season starts, so your calendar fills first.</li>
+        <li><b>Your list, kept in one place.</b> Every VIP is saved and tagged, ready for reminders all season.</li>
+      </ul>
+    </div>
+    <div class="vip-card" aria-hidden="true">
+      <div class="vc-tag">Join the VIP list</div>
+      <div class="vc-h">Be first in line for the 2027 tax season</div>
+      <div class="vc-p">VIPs get early-bird pricing and first pick of appointments.</div>
+      <div class="vc-f">Your name</div>
+      <div class="vc-f">Phone</div>
+      <div class="vc-f">Email</div>
+      <div class="vc-btn">Add me to the VIP list</div>
+      <div class="vc-ok">✓ You're on the list. Watch your inbox.</div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" data-section="how">
+  <div class="wrap">
+    <span class="eyebrow">How it works</span>
+    <h2>Live in about a week</h2>
+    <div class="steps">
+      <div class="step"><h3>Claim and pay</h3><p>Pay the $297 setup through secure checkout. Your founding spot is locked in the moment you pay.</p></div>
+      <div class="step"><h3>Complete your intake</h3><p>Your intake form opens right after checkout. Services, prices and a few lines about you, in your own words, so there are no surprises.</p></div>
+      <div class="step"><h3>Review and go live</h3><p>Your page goes live within 7 days of your completed intake, with one round of changes included.</p></div>
+    </div>
+  </div>
+</section>
+
+<section data-section="addons">
+  <div class="wrap">
+    <span class="eyebrow">Grow when you're ready</span>
+    <h2>Add more as your season picks up</h2>
+    <p class="lede">Start with the page. Turn on more whenever you want, all in the same place.</p>
+    <div class="ladder">
+      <div class="tier"><span class="tag">Get seen</span><h3>Social Autopilot</h3><div class="tp">$197<small>/mo</small></div><p>Facebook and Instagram posts three times a week, a tax-season content calendar and timely IRS updates.</p></div>
+      <div class="tier"><span class="tag">Never miss one</span><h3>Never Miss a Client</h3><div class="tp">$97<small>/mo</small></div><p>Chat assistant on your page plus an automatic text back on every missed call. One-time texting registration applies.</p></div>
+      <div class="tier"><span class="tag">Answer every call</span><h3>AI Receptionist</h3><div class="tp">$197<small>/mo</small></div><p>Answers your line calmly, takes details, books appointments and transfers to your cell.</p><a class="vera" href="tel:+12408521600">Hear Vera answer live: (240) 852-1600</a></div>
+      <div class="tier top"><span class="tag">Everything</span><h3>The full setup</h3><div class="tp"><s>$2,500</s>$1,497<small> + $397/mo</small></div><p>Page, social, chat, text-back and AI receptionist together, like Bright Seal Tax.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" data-section="faq">
+  <div class="wrap">
+    <span class="eyebrow">Questions</span>
+    <h2>Before you claim a spot</h2>
+    <div class="faq">
+      <details><summary>What do I need to send?</summary><p>A photo, your logo if you have one, your services and starting prices, your phone number, your booking link if you use one, and a few lines about you. The intake form walks you through it.</p></details>
+      <details><summary>Do I need my own domain?</summary><p>If you have one, we use it. If you don't, we can buy one for you and bill it at cost.</p></details>
+      <details><summary>Can I make changes?</summary><p>One round of changes is included before launch. Send them together within 7 days of seeing your page. After launch, one small change a month is included. Bigger changes are quoted first.</p></details>
+      <details><summary>Is the AI receptionist included?</summary><p>No. The Launch Page includes your page, consultation form, VIP list, booking link, review links and hosting. The AI receptionist, chat assistant, missed-call text-back and social media are add-ons you can turn on anytime.</p></details>
+      <details><summary>How does the VIP list work?</summary><p>Visitors join from your page with their name, phone and email, and you pick the perk, like an early-bird discount. Each one gets a welcome email and you get an alert. When your booking opens, we send your whole list one message so they book first.</p></details>
+      <details><summary>When am I billed?</summary><p>You pay the $297 setup at checkout. Your $49 monthly plan starts only after your page is live, so you never pay monthly for a page you can't use yet.</p></details>
+      <details><summary>Is there a contract?</summary><p>No. Plans are month-to-month.</p></details>
+      <details><summary>Why only 25 spots?</summary><p>Every page is built by hand, not churned out. Capping the founding price keeps launch times fast for everyone who claims a spot.</p></details>
+      <details><summary>Should I send client information here?</summary><p>No. Never send Social Security numbers, tax documents or client details through this page.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="claim" id="start" data-section="claim">
+  <div class="wrap">
+    <span class="eyebrow" style="color:#FBBF24">Founding 25</span>
+    <h2>Claim your <em>founding spot</em></h2>
+    <p class="lede">Pay the setup, fill in your intake, and we start building. No waiting for a reply.</p>
+    <div class="claim-box">
+      <div class="claim-sum"><span><b>$297</b> setup <s style="color:#64748B">$697</s></span><span>then <b>$49</b>/mo</span><span>Live within 7 days of intake</span></div>
+      <p class="incl-line">Includes your landing page, consultation form, VIP list, review links and hosting. <b>AI receptionist not included.</b></p>
+      <form id="pay-form" class="pay-form" novalidate>
+        <label for="email" class="pay-label">Your email for the receipt and intake link</label>
+        <div class="pay-row">
+          <input type="email" id="email" name="email" required autocomplete="email" placeholder="you@yourpractice.com">
+          <button type="submit" class="btn btn-gold" id="pay-btn">Claim my spot · Pay $297</button>
+        </div>
+      </form>
+      <p class="pay-fine" id="pay-note">Secure checkout. Your intake form opens right after payment. The $49/mo plan starts only after your page is live. Month-to-month, cancel anytime.</p>
+      <div class="ask">
+        <p class="ask-h">Have a question first?</p>
+        <div id="fx">
+          <button type="button" class="btn btn-ghost" id="fx-open" aria-expanded="false" aria-controls="fx-panel">Ask a question</button>
+          <p id="fx-note" class="fine" role="status" aria-live="polite" hidden></p>
+          <div id="fx-panel" hidden><div id="fx-host"></div><p class="fine">We use your details only to answer your question. We never sell them. Please don't send client information here.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap ft">
+    <span>© 2026 CallDirector AI, LLC</span>
+    <span><a href="https://calldirector.ai/">calldirector.ai</a> · <a href="https://calldirector.ai/privacy/">Privacy</a> · <a href="https://calldirector.ai/terms/">Terms</a></span>
+  </div>
+</footer>
+
+<div id="gb" role="dialog" aria-label="Chat greeting" hidden>Questions about the founding offer? Ask me here.<button type="button" aria-label="Dismiss" id="gb-x">&times;</button></div>
+
+<script>
+(function(){
+var CFG={FORM_ID:'ni58bnog',WIDGET_ID:'7633704',CONTACT:'hello@calldirector.ai'};
+var payForm=document.getElementById('pay-form'),payBtn=document.getElementById('pay-btn'),payNote=document.getElementById('pay-note'),payEmail=document.getElementById('email');
+var payNoteDefault=payNote.textContent;
+payForm.addEventListener('submit',function(e){
+  e.preventDefault();
+  var v=(payEmail.value||'').trim();
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)){payNote.textContent='Enter a valid email to continue to checkout.';payEmail.focus();return}
+  if(typeof window.__processDonation!=='function'){payNote.textContent='Checkout is loading. Please try again in a moment, or email '+CFG.CONTACT+'.';return}
+  payBtn.disabled=true;payNote.textContent='Opening secure checkout...';
+  try{window.__processDonation({amount:297,email:v})}catch(err){payBtn.disabled=false;payNote.textContent='We could not open checkout. Please email '+CFG.CONTACT+'.'}
+  setTimeout(function(){payBtn.disabled=false;payNote.textContent=payNoteDefault},8000)});
+payEmail.addEventListener('input',function(){if(payNote.textContent!==payNoteDefault&&!payBtn.disabled)payNote.textContent=payNoteDefault});
+var loaded=false,loading=false,t0=Date.now(),timers=[],armed=false;
+var open=document.getElementById('fx-open'),panel=document.getElementById('fx-panel'),host=document.getElementById('fx-host'),note=document.getElementById('fx-note');
+var bot=!!navigator.webdriver;
+function say(t,ms){note.textContent=t;note.hidden=!t;if(t&&ms){timers.push(setTimeout(function(){note.hidden=true;note.textContent=''},ms))}}
+function inject(){
+  if(loaded||loading)return;
+  loading=true;var s=document.createElement('script');s.src='https://app.calldirector.ai/forms-embed.js';s.async=true;
+  s.setAttribute('data-form',CFG.FORM_ID);s.setAttribute('data-theme','light');s.setAttribute('data-accent','#7C3AED');
+  s.onload=function(){loaded=true;loading=false};
+  s.onerror=function(){loading=false;say('We could not load the form. Please email '+CFG.CONTACT+'.')};
+  host.appendChild(s)}
+function reveal(){panel.hidden=false;open.setAttribute('aria-expanded','true');say('');inject()}
+function reset(){timers.forEach(clearTimeout);timers=[];panel.hidden=true;host.innerHTML='';loaded=false;loading=false;armed=false;open.setAttribute('aria-expanded','false');open.disabled=false}
+function arm(e){if(e&&e.isTrusted)armed=true}
+['pointerdown','touchstart','keydown'].forEach(function(ev){open.addEventListener(ev,arm,{passive:true})});
+open.addEventListener('click',function(e){
+  if(bot){say('Please email '+CFG.CONTACT+' with your question.');return}
+  if(!e.isTrusted||!armed)return;
+  if(!panel.hidden){reset();return}
+  var wait=3000-(Date.now()-t0);
+  if(wait>0){open.disabled=true;say('One moment...');timers.push(setTimeout(function(){open.disabled=false;reveal()},wait));return}
+  reveal()});
+window.addEventListener('paymegpt-form:submitted',function(){
+  timers.push(setTimeout(function(){reset();say("Thank you. We'll answer your question shortly.",12000)},3500))});
+var w=document.createElement('script');w.src='https://app.calldirector.ai/widget.js';w.async=true;w.setAttribute('data-widget',CFG.WIDGET_ID);document.body.appendChild(w);
+var b=document.getElementById('gb'),t2;b.hidden=false;
+function hide(){b.classList.remove('on');setTimeout(function(){b.hidden=true},400)}
+document.getElementById('gb-x').onclick=function(){hide();clearTimeout(t2)};
+setTimeout(function(){b.classList.add('on');t2=setTimeout(hide,15000)},2500);
+})();
+</script>
+</body>
+</html>

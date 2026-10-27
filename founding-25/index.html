@@ -422,13 +422,12 @@
     <div class="f25-go-box">
       <span class="f25-eyebrow">Founding 25</span>
       <h2 class="f25-h2">Get your <em>landing page</em></h2>
-      <p class="f25-lede">Fill in one short form (about 10 minutes). We start building as soon as we have everything.</p>
+      <p class="f25-lede">Claim your spot with secure checkout. Right after you pay, you'll fill in one short form (about 10 minutes), and we start building as soon as we have everything.</p>
       <div class="f25-go-sum"><span><b>$199</b> one-time</span><span>No monthly fee</span><span>3 rounds of edits</span><span>Live in 7 days</span></div>
       <div class="f25-ready"><b>Have these ready:</b> your services and starting prices, a few lines about you, a headshot, your logo (if you have one), the phone number clients should call, your booking link, your domain (or the name you want), your Google, Facebook and Instagram links, and your VIP perk.</div>
       <div id="fx">
-        <button type="button" class="f25-btn" id="fx-open" aria-expanded="false" aria-controls="fx-panel">Get my landing page</button>
-        <p id="fx-note" class="f25-fine" role="status" aria-live="polite" hidden></p>
-        <div id="fx-panel" hidden><div id="fx-host"></div><p class="f25-fine">We use your details only to contact you about this offer. Please don't send client information here.</p></div>
+        <a class="f25-btn" href="https://buy.stripe.com/dRmfZh2Wzgje4LpfaS33W0f" rel="noopener">Claim my spot for $199</a>
+        <p class="f25-fine">Secure checkout by Stripe. One-time payment, no monthly fee. Only 25 founding spots.</p>
       </div>
     </div>
   </div>
@@ -446,30 +445,7 @@
 
 <script>
 (function(){
-var CFG={FORM_ID:'ni58bnog',WIDGET_ID:'7633704',CONTACT:'hello@calldirector.ai'};
-var loaded=false,loading=false,t0=Date.now(),timers=[],armed=false;
-var open=document.getElementById('fx-open'),panel=document.getElementById('fx-panel'),host=document.getElementById('fx-host'),note=document.getElementById('fx-note');
-var bot=!!navigator.webdriver;
-function say(t,ms){note.textContent=t;note.hidden=!t;if(t&&ms){timers.push(setTimeout(function(){note.hidden=true;note.textContent=''},ms))}}
-function inject(){
-  if(loaded||loading)return;
-  loading=true;var s=document.createElement('script');s.src='https://app.calldirector.ai/forms-embed.js';s.async=true;
-  s.setAttribute('data-form',CFG.FORM_ID);s.setAttribute('data-theme','light');s.setAttribute('data-accent','#7C3AED');s.setAttribute('data-bg','#FFFFFF');
-  s.onload=function(){loaded=true;loading=false};
-  s.onerror=function(){loading=false;say('We could not load the form. Please email '+CFG.CONTACT+'.')};
-  host.appendChild(s)}
-function reveal(){panel.hidden=false;open.setAttribute('aria-expanded','true');say('');inject()}
-function reset(){timers.forEach(clearTimeout);timers=[];panel.hidden=true;host.innerHTML='';loaded=false;loading=false;armed=false;open.setAttribute('aria-expanded','false');open.disabled=false}
-['pointerdown','touchstart','keydown'].forEach(function(ev){open.addEventListener(ev,function(e){if(e.isTrusted)armed=true},{passive:true})});
-open.addEventListener('click',function(e){
-  if(bot){say('Please email '+CFG.CONTACT+' to get started.');return}
-  if(!e.isTrusted||!armed)return;
-  if(!panel.hidden){reset();return}
-  var wait=3000-(Date.now()-t0);
-  if(wait>0){open.disabled=true;say('One moment...');timers.push(setTimeout(function(){open.disabled=false;reveal()},wait));return}
-  reveal()});
-window.addEventListener('paymegpt-form:submitted',function(){
-  timers.push(setTimeout(function(){reset();say("Thank you. Check your email for next steps.",12000)},3500))});
+var CFG={WIDGET_ID:'7633704'};
 var w=document.createElement('script');w.src='https://app.calldirector.ai/widget.js';w.async=true;w.setAttribute('data-widget',CFG.WIDGET_ID);document.body.appendChild(w);
 var b=document.getElementById('gb'),t2;b.hidden=false;
 function hide(){b.classList.remove('on');setTimeout(function(){b.hidden=true},400)}

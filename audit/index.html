@@ -359,33 +359,40 @@
 
 <section class="page" data-page="audit">
 <div class="sec-navy hero">
-    <div class="wrap split" style="grid-template-columns:minmax(0,1fr) minmax(0,.95fr);align-items:start">
-      <div class="stack" style="gap:24px;align-items:flex-start">
+    <style>
+      .audit-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.95fr);grid-template-areas:"intro form" "details form";grid-template-rows:auto 1fr;column-gap:clamp(32px,6vw,80px);row-gap:28px;align-items:start}
+      .audit-hero .a-intro{grid-area:intro}.audit-hero .a-details{grid-area:details}.audit-hero #leadForm{grid-area:form}
+      @media (max-width:1000px){.audit-hero{grid-template-columns:minmax(0,1fr);grid-template-areas:"intro" "form" "details";grid-template-rows:auto;row-gap:24px}}
+      @media (max-width:560px){.audit-hero h1{font-size:34px}.audit-hero .lede{font-size:18px}.audit-hero .form{padding:22px 18px}}
+    </style>
+    <div class="wrap audit-hero">
+      <div class="stack a-intro" style="gap:18px;align-items:flex-start">
         <div class="eyebrow" style="margin:0">Free Lead Leak Audit</div>
-        <h1 style="font-size:clamp(36px,4.6vw,56px)">Find Out Where New Leads Are Slipping Away.</h1>
-        <p class="lede muted-d" style="max-width:560px">We test the public-facing phone number and website you authorize, then send you a private one-page report showing where a new inquiry may get delayed, missed, or left without a clear next step. Turnaround: <span data-cfg="auditDays" data-ph="5">5</span> business days.</p>
-        <p class="muted-d" style="font-size:15px">Built for service businesses that depend on calls, quote requests, appointments, or estimates.</p>
+        <h1 style="font-size:clamp(34px,4.6vw,56px)">Find Out Where Customers Are Slipping Away.</h1>
+        <p class="lede muted-d" style="max-width:560px">We call your business, try your website form, and check your Google listing. Then we send you a short private report showing where customers slip away, and what to fix first. Ready in <span data-cfg="auditDays" data-ph="5">5</span> business days.</p>
+      </div>
+      <div class="stack a-details" style="gap:18px;align-items:flex-start">
         <ul class="checks" style="font-size:18px;color:#E2E8F0">
-          <li><svg width="20" height="20"><use href="#i-check"/></svg>An authorized test of your public-facing call path, including after-hours or weekend handling where applicable</li>
-          <li><svg width="20" height="20"><use href="#i-check"/></svg>How quickly a website inquiry receives an initial response</li>
-          <li><svg width="20" height="20"><use href="#i-check"/></svg>Public Google Business Profile and review-request basics</li>
-          <li><svg width="20" height="20"><use href="#i-check"/></svg>The first three practical fixes we would prioritize</li>
+          <li><svg width="20" height="20"><use href="#i-check"/></svg>We call your business line, including after hours</li>
+          <li><svg width="20" height="20"><use href="#i-check"/></svg>We time how fast your website form gets a reply</li>
+          <li><svg width="20" height="20"><use href="#i-check"/></svg>We check your Google listing and reviews</li>
+          <li><svg width="20" height="20"><use href="#i-check"/></svg>You get the first three fixes we would make</li>
         </ul>
-        <p class="muted-d" style="font-size:16px">We do not record audit calls, and your report is sent only to you. We test only the public-facing phone number and website you provide and authorize. Prefer to email? <span data-cfg="contactEmail" data-ph="[EMAIL]" style="font-weight:600;color:#fff"><a href="mailto:hello@calldirector.ai" style="text-decoration:underline">hello@calldirector.ai</a></span></p>
+        <p class="muted-d" style="font-size:16px">We don't record audit calls, and your report goes only to you. We only test the phone number and website you give us. Prefer email? <span data-cfg="contactEmail" data-ph="[EMAIL]" style="font-weight:600;color:#fff"><a href="mailto:hello@calldirector.ai" style="text-decoration:underline">hello@calldirector.ai</a></span></p>
       </div>
       <form class="form" id="leadForm" novalidate>
         <h2>Get my free audit</h2>
         <div class="fields">
           <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
           <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
-          <div class="field"><label for="f-phone">Phone (optional)</label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
-          <div class="field"><label for="f-biz">Business name (optional)</label><input id="f-biz" name="business" type="text" autocomplete="organization"></div>
-          <div class="field"><label for="f-trade">Type of business (optional)</label><input id="f-trade" name="trade" type="text" placeholder="e.g. commercial painting"></div>
-          <div class="field"><label for="f-city">City and state (optional)</label><input id="f-city" name="location" type="text"></div>
-          <div class="field"><label for="f-website">Website URL to review</label><input id="f-website" name="website" type="url" autocomplete="url" placeholder="https://yourbusiness.com" required></div>
-          <div class="field"><label for="f-bizphone">Public business phone number to test</label><input id="f-bizphone" name="businessPhone" type="tel" required><small class="muted" style="font-size:13px">Use the number a new customer would call.</small></div>
+          <div class="field"><label for="f-bizphone">Business phone number</label><input id="f-bizphone" name="businessPhone" type="tel" autocomplete="tel" required><small class="muted" style="font-size:13px">The number a new customer would call.</small></div>
+          <div class="field"><label for="f-website">Business website</label><input id="f-website" name="website" type="text" inputmode="url" autocomplete="url" placeholder="https://yourbusiness.com" required></div>
         </div>
         <details class="more"><summary>Add details (optional)</summary>
+        <div class="field"><label for="f-phone">Your cell, if different (optional)</label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
+        <div class="field"><label for="f-biz">Business name (optional)</label><input id="f-biz" name="business" type="text" autocomplete="organization"></div>
+        <div class="field"><label for="f-trade">Type of business (optional)</label><input id="f-trade" name="trade" type="text" placeholder="e.g. garage door repair"></div>
+        <div class="field"><label for="f-city">City and state (optional)</label><input id="f-city" name="location" type="text"></div>
         <div class="field"><label for="f-window">Business hours or best test window (optional)</label><input id="f-window" name="testWindow" type="text" placeholder="e.g. Mon–Fri 8 AM–5 PM; after-hours test is OK"></div>
         <div class="field"><label for="f-msg">Where do you think leads are slipping away? (optional)</label><textarea id="f-msg" name="message"></textarea></div>
         </details>
@@ -588,9 +595,10 @@
     if (Date.now() - loadedAt < 3000) { status.textContent = 'Please review your details and press the button again.'; return; }
     if (Date.now() - lastSent < 30000) { status.textContent = 'Your request was just sent. Please wait a moment before sending another.'; return; }
     if (/https?:\/\/|www\./i.test([f.name.value, f.business.value, f.trade.value, f.location.value, f.message.value].join(' '))) { status.textContent = 'Please remove links from the text fields. Your website goes in the website field.'; return; }
-    var name = f.name.value.trim(), email = f.email.value.trim(), phone = f.phone.value.trim();
-    var website = f.website.value.trim(), businessPhone = f.businessPhone.value.trim(), testWindow = f.testWindow.value.trim();
-    if (!name || !/^\S+@\S+\.\S+$/.test(email) || !website || !businessPhone) { status.textContent = 'Please add your name, a valid email, your website URL, and the public business phone number you want us to review.'; return; }
+    var name = f.name.value.trim(), email = f.email.value.trim(), phone = f.phone.value.trim() || f.businessPhone.value.trim();
+    var website = f.website.value.trim(); if (website && !/^https?:\/\//i.test(website)) { website = 'https://' + website; }
+    var businessPhone = f.businessPhone.value.trim(), testWindow = f.testWindow.value.trim();
+    if (!name || !/^\S+@\S+\.\S+$/.test(email) || !website || !businessPhone) { status.textContent = 'Please add your name, a valid email, your business phone number, and your website.'; return; }
     if (!f.consent.checked) { status.textContent = 'Please tick the consent box so we can test your business and contact you about your audit.'; return; }
     var digits = phone.replace(/\D/g, '');
     var e164 = digits.length === 10 ? '+1' + digits : (digits.length === 11 && digits.charAt(0) === '1' ? '+' + digits : (digits ? '+' + digits : ''));

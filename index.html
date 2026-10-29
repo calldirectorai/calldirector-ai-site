@@ -332,6 +332,41 @@
 </script>
 <link rel="stylesheet" href="/styles.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"CallDirector AI","url":"https://calldirector.ai/","email":"hello@calldirector.ai","telephone":"+1-240-852-1600","description":"AI call answering, lead follow-up and booking systems for service businesses in Washington DC, Maryland and Virginia.","areaServed":["Washington, DC","Maryland","Virginia"],"founder":{"@type":"Person","name":"Rodrigue Dossouvi","sameAs":"https://www.linkedin.com/in/roddossouvi"},"sameAs":["https://facebook.com/CallDirectorAI","https://instagram.com/calldirectorai","https://share.google/0OtLmXQK4wiiwLQkR"]}</script>
+<script>
+/* Meta Pixel (dataset 1644617050560187) */
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1644617050560187');
+fbq('track','PageView');
+
+/* Campaign attribution: remembers where a visitor came from (UTM / src / Facebook referrer) for 30 days
+   so the audit form can report the source. Wrapped in try/catch: storage can be blocked. */
+(function(){
+  var KEY = 'cd_attr';
+  function read(){ try { return JSON.parse(localStorage.getItem(KEY) || 'null'); } catch (e) { return null; } }
+  try {
+    var q = new URLSearchParams(location.search), cur = {}, campaign = false;
+    ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','src','fbclid'].forEach(function(k){
+      var v = q.get(k); if (v) { cur[k] = String(v).slice(0, 100); campaign = true; }
+    });
+    var ref = '';
+    try { ref = document.referrer ? new URL(document.referrer).hostname : ''; } catch (e) {}
+    if (!campaign && ref && ref.indexOf(location.hostname) === -1) { cur.ref = ref; }
+    var prev = read(), fresh = !prev || (Date.now() - prev.ts) > 30 * 864e5;
+    if (campaign || (cur.ref && fresh)) {
+      cur.landing = location.pathname; cur.ts = Date.now();
+      localStorage.setItem(KEY, JSON.stringify(cur));
+    }
+  } catch (e) {}
+  window.cdAttribution = function(){
+    var a = read() || {}, src = a.utm_source || a.src || '';
+    if (!src && a.ref) { src = /facebook\.com$|fb\.com$/.test(a.ref) ? 'facebook' : a.ref; }
+    var label = src || 'direct';
+    if (a.utm_medium) { label += ' / ' + a.utm_medium; }
+    if (a.utm_campaign) { label += ' / ' + a.utm_campaign; }
+    return { label: label, source: src || 'direct', medium: a.utm_medium || '', campaign: a.utm_campaign || '', content: a.utm_content || '', term: a.utm_term || '', landing: a.landing || '', fbclid: a.fbclid ? 'yes' : '' };
+  };
+})();
+</script>
 </head>
 <body>
 
@@ -586,7 +621,7 @@
   <div class="sec cta">
     <div class="wrap">
       <h2>Find Out Where Leads Are Slipping Away</h2>
-      <p>We test the public call path and website you authorize, then send you a private one-page report with the first three fixes we'd prioritize. Turnaround: 5 business days.</p>
+      <p>We test the public call path and website you authorize, then send you a private one-page report with the first three fixes we'd prioritize. Turnaround: 48 hours.</p>
       <div class="btns">
         <a class="btn btn-white" href="audit/">Request My Free Lead Leak Audit</a>
         <a class="btn btn-line" href="vera/" data-vera-call><span data-vera-label>Talk to Vera</span></a>

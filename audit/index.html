@@ -369,7 +369,7 @@
       <div class="stack a-intro" style="gap:18px;align-items:flex-start">
         <div class="eyebrow" style="margin:0">Free Lead Leak Audit</div>
         <h1 style="font-size:clamp(34px,4.6vw,56px)">Find Out Where Customers Are Slipping Away.</h1>
-        <p class="lede muted-d" style="max-width:560px">We call your business, try your website form, and check your Google listing. Then we send you a short private report showing where customers slip away, and what to fix first. Ready in <span data-cfg="auditDays" data-ph="5">5</span> business days.</p>
+        <p class="lede muted-d" style="max-width:560px">We call your business, try your website form, and check your Google listing. Then we send you a short private report showing where customers slip away, and what to fix first. Ready within 48 hours.</p>
       </div>
       <div class="stack a-details" style="gap:18px;align-items:flex-start">
         <ul class="checks" style="font-size:18px;color:#E2E8F0">
@@ -612,7 +612,7 @@
     }
     status.textContent = 'Sending\u2026';
     fetch(CONFIG.formEndpoint, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
-      .then(function (r) { if (!r.ok) { throw new Error('bad status'); } status.textContent = 'Thanks, ' + name + '. Your audit request is in. We\u2019ll confirm the business details and send your private one-page report within ' + CONFIG.auditDays + ' business days.'; lastSent = Date.now(); try { if (window.gtag) { gtag('event', 'generate_lead', { event_category: 'audit_form', lead_source: attr.label }); } if (window.fbq) { fbq('track', 'Lead'); } } catch (x) {} form.reset(); })
+      .then(function (r) { if (!r.ok) { throw new Error('bad status'); } status.textContent = 'Thanks, ' + name + '. Your audit request is in. We\u2019ll confirm the business details and send your private one-page report within 48 hours.'; lastSent = Date.now(); try { if (window.gtag) { gtag('event', 'generate_lead', { event_category: 'audit_form', lead_source: attr.label }); } if (window.fbq) { fbq('track', 'Lead'); } } catch (x) {} form.reset(); })
       .catch(function () { status.innerHTML = 'We couldn\u2019t send your request right now. Please try again, call <a href="tel:+12408521600">(240) 852-1600</a>, or email <a href="mailto:hello@calldirector.ai">hello@calldirector.ai</a>.'; });
   });
   }

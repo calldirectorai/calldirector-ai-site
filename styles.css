@@ -420,7 +420,7 @@ a.tile:hover{border-color:var(--accent)}
 }
 @media (max-width:700px){
   body{padding-bottom:84px}
-  .mbar{display:block;position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--navy);border-top:1px solid #1E293B;padding:10px 92px calc(10px + env(safe-area-inset-bottom,0px)) 16px}
+  .mbar{display:block;position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--navy);border-top:1px solid #1E293B;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px))}
   .mbar .btn{width:100%}
   body.no-mbar .mbar{display:none}
   body.no-mbar{padding-bottom:0}

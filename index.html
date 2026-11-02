@@ -21,6 +21,7 @@
 <link rel="stylesheet" href="styles.css">
 
 
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-GKLZMQMLMK"></script>
 <script>
@@ -28,6 +29,42 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-GKLZMQMLMK');
+</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"CallDirector AI","url":"https://calldirector.ai/","email":"hello@calldirector.ai","telephone":"+1-240-852-1600","description":"AI call answering, lead follow-up and booking systems for service businesses in Washington DC, Maryland and Virginia.","areaServed":["Washington, DC","Maryland","Virginia"],"founder":{"@type":"Person","name":"Rodrigue Dossouvi","sameAs":"https://www.linkedin.com/in/roddossouvi"},"sameAs":["https://facebook.com/CallDirectorAI","https://instagram.com/calldirectorai","https://share.google/0OtLmXQK4wiiwLQkR"]}</script>
+<script>
+/* Meta Pixel (dataset 1644617050560187) */
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1644617050560187');
+fbq('track','PageView');
+
+/* Campaign attribution: remembers where a visitor came from (UTM / src / Facebook referrer) for 30 days
+   so the audit form can report the source. Wrapped in try/catch: storage can be blocked. */
+(function(){
+  var KEY = 'cd_attr';
+  function read(){ try { return JSON.parse(localStorage.getItem(KEY) || 'null'); } catch (e) { return null; } }
+  try {
+    var q = new URLSearchParams(location.search), cur = {}, campaign = false;
+    ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','src','fbclid'].forEach(function(k){
+      var v = q.get(k); if (v) { cur[k] = String(v).slice(0, 100); campaign = true; }
+    });
+    var ref = '';
+    try { ref = document.referrer ? new URL(document.referrer).hostname : ''; } catch (e) {}
+    if (!campaign && ref && ref.indexOf(location.hostname) === -1) { cur.ref = ref; }
+    var prev = read(), fresh = !prev || (Date.now() - prev.ts) > 30 * 864e5;
+    if (campaign || (cur.ref && fresh)) {
+      cur.landing = location.pathname; cur.ts = Date.now();
+      localStorage.setItem(KEY, JSON.stringify(cur));
+    }
+  } catch (e) {}
+  window.cdAttribution = function(){
+    var a = read() || {}, src = a.utm_source || a.src || '';
+    if (!src && a.ref) { src = /facebook\.com$|fb\.com$/.test(a.ref) ? 'facebook' : a.ref; }
+    var label = src || 'direct';
+    if (a.utm_medium) { label += ' / ' + a.utm_medium; }
+    if (a.utm_campaign) { label += ' / ' + a.utm_campaign; }
+    return { label: label, source: src || 'direct', medium: a.utm_medium || '', campaign: a.utm_campaign || '', content: a.utm_content || '', term: a.utm_term || '', landing: a.landing || '', fbclid: a.fbclid ? 'yes' : '' };
+  };
+})();
 </script>
 
 <!-- SEO Meta Tags -->
@@ -39,10 +76,9 @@
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="CallDirector AI | 24/7 AI Receptionist &amp; Lead Follow-Up for Service Businesses" />
 <meta name="twitter:description" content="CallDirector helps service businesses answer calls 24/7, capture leads, follow up by text, and book more appointments with an AI-powered front desk and lead-response system." />
-<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAE6ElEQVR42rWXTYxcRxWFv3Prve7p6e4Z28OMx38RhoSMhRdOgAixSEhAgFDEIhDEgkQIKUJsIoiiBHaINbBESJZArII0OxAIJWwQURA/iyHix0bBAXvE2OlJPE663f36varLon+wcbDjcfstnq5KJZ1b555b55YYfQak5srx/cHSU3J9BvxuQMzgM+FZ4LQ7P+1X9r3ea3++MMHUJFhYXvuELJyUdIfj4M6MwOmXYjA08ly0avFsjPGJNzunngcsAL64cuxjFrIXJBbdUxyfXLMAvzwUa6slT358x2uW0qkLtb31mj1Wn196sehtn1Fr9cSy+XBD6ACkBAqzOLkEZRT72xW//voWh1eHeGE8/P398YW/taxVj1sltRNmafC0yQ7OFBxNqT9+sOTwUkVnO0eZc/+dRShLTyHYQUuDpw306Kjg0iyAhYheIRkCygQeIQ+OA0UlEHJPDnrUJB1194kYbwm88pIqDZnP9zCsejg+EpMme6ax4S5JRw3wWZAevaKRLfDFD/6Apz76Cz619iykEl1fy263pvZRs5iMoupy75HPcs+hhzDN8+BdX+HQnnsoqsvXq65s9yo3IOEexzHUsybDKlGlgio5tayJk657RtttvYfVZaRALWtSVF2EpslMxOiebnxX7ObkZRpwaPE4X/3IOl+7/+fce/gRhrGHuPkutpsBnlAdU8lDdz3JkT1rtOorfHLtGRr5HpJXNy0oe6eUF1WXMvbHiQRyqzOsEmXVR4jc5vBd+McNE3CcMhW8Z+nDrLbXGFa9UX1JV7Hiu+zm7Ea0D6senz72TR688wmGVcH6n57l9+eew2Zza1/LgCRMGaZATCXt+jIfOPI5BuWALNT50B1fAMRszPp/EhCijAXdYnvaWkJUaTii2X0sNMGsE5CMYeqz0novD7//G7xv+QGGsY+kKwBnMiZcqwEhYipZrK/ypft+xErrAGUFJ3/3GJs7L6Nb86l3wIBEGfusLtzNvsYB3ui9QTA4uu8+YiqQdJsTGNObvCK6EywDfFz72wf+9l3wNtGVPT6Jb7Q2cnkf/69Y9f+bgGPKxkxE3BNBOZJhCiSPJI8E5YAIyqdrpoBkBOW4J5KP5lopJ7PRUFIlkRxqmV+TgIMTrMal/hbRK1r1veTBuNjfpKi69IrXadWbzNcCF/ubxDTgYn+T+VqgVW/SK16nqLpc7G+SB6NV30tMFf3y32xdalBFeFe7wnLnH50cM8azEh7mWsvfAgiWc2lwnu3eq7Tqi7z0r3X+cO4n4M7ZnQ3ac6u80vkjz//9OzjOuZ0Nclvk0uA1fvaXb9Mrtun0zjCoCoI5vzz1Xc7tvETnrTanL2Tsayd+/JsFTr7YZi73SSmkhZVjZ8zs3e7uQlbE3piTRC1rYgqUsU9MFeDkYY5gNWIaUsbBqByWkYcGyePYKwwEtdBEct4ajAbU6NCeSwiSJKWU/pmBr4OegZQcqGet6a040UIeGuSB6ZAx0UeW1/8rQE8I0cgXr1pzh8VGms7dMU2kaAa+ftseJtfx1whmjm8l1U5Y9/xGR+6PS5JkYbRhZl5ztbPjUbIgSXJ/vHt+oxMAK3rbZ2qNfb9F9oBke2fqNlfYrGTmzllP8fNvdk79avo4Bay4vP1K1tz/nJSSXEvA0gyvQQeddvkPo9uXu52/vjx5lf8HXQ5SB5R1JloAAAAASUVORK5CYII=" />
-<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAE6ElEQVR42rWXTYxcRxWFv3Prve7p6e4Z28OMx38RhoSMhRdOgAixSEhAgFDEIhDEgkQIKUJsIoiiBHaINbBESJZArII0OxAIJWwQURA/iyHix0bBAXvE2OlJPE663f36varLon+wcbDjcfstnq5KJZ1b555b55YYfQak5srx/cHSU3J9BvxuQMzgM+FZ4LQ7P+1X9r3ea3++MMHUJFhYXvuELJyUdIfj4M6MwOmXYjA08ly0avFsjPGJNzunngcsAL64cuxjFrIXJBbdUxyfXLMAvzwUa6slT358x2uW0qkLtb31mj1Wn196sehtn1Fr9cSy+XBD6ACkBAqzOLkEZRT72xW//voWh1eHeGE8/P398YW/taxVj1sltRNmafC0yQ7OFBxNqT9+sOTwUkVnO0eZc/+dRShLTyHYQUuDpw306Kjg0iyAhYheIRkCygQeIQ+OA0UlEHJPDnrUJB1194kYbwm88pIqDZnP9zCsejg+EpMme6ax4S5JRw3wWZAevaKRLfDFD/6Apz76Cz619iykEl1fy263pvZRs5iMoupy75HPcs+hhzDN8+BdX+HQnnsoqsvXq65s9yo3IOEexzHUsybDKlGlgio5tayJk657RtttvYfVZaRALWtSVF2EpslMxOiebnxX7ObkZRpwaPE4X/3IOl+7/+fce/gRhrGHuPkutpsBnlAdU8lDdz3JkT1rtOorfHLtGRr5HpJXNy0oe6eUF1WXMvbHiQRyqzOsEmXVR4jc5vBd+McNE3CcMhW8Z+nDrLbXGFa9UX1JV7Hiu+zm7Ea0D6senz72TR688wmGVcH6n57l9+eew2Zza1/LgCRMGaZATCXt+jIfOPI5BuWALNT50B1fAMRszPp/EhCijAXdYnvaWkJUaTii2X0sNMGsE5CMYeqz0novD7//G7xv+QGGsY+kKwBnMiZcqwEhYipZrK/ypft+xErrAGUFJ3/3GJs7L6Nb86l3wIBEGfusLtzNvsYB3ui9QTA4uu8+YiqQdJsTGNObvCK6EywDfFz72wf+9l3wNtGVPT6Jb7Q2cnkf/69Y9f+bgGPKxkxE3BNBOZJhCiSPJI8E5YAIyqdrpoBkBOW4J5KP5lopJ7PRUFIlkRxqmV+TgIMTrMal/hbRK1r1veTBuNjfpKi69IrXadWbzNcCF/ubxDTgYn+T+VqgVW/SK16nqLpc7G+SB6NV30tMFf3y32xdalBFeFe7wnLnH50cM8azEh7mWsvfAgiWc2lwnu3eq7Tqi7z0r3X+cO4n4M7ZnQ3ac6u80vkjz//9OzjOuZ0Nclvk0uA1fvaXb9Mrtun0zjCoCoI5vzz1Xc7tvETnrTanL2Tsayd+/JsFTr7YZi73SSmkhZVjZ8zs3e7uQlbE3piTRC1rYgqUsU9MFeDkYY5gNWIaUsbBqByWkYcGyePYKwwEtdBEct4ajAbU6NCeSwiSJKWU/pmBr4OegZQcqGet6a040UIeGuSB6ZAx0UeW1/8rQE8I0cgXr1pzh8VGms7dMU2kaAa+ftseJtfx1whmjm8l1U5Y9/xGR+6PS5JkYbRhZl5ztbPjUbIgSXJ/vHt+oxMAK3rbZ2qNfb9F9oBke2fqNlfYrGTmzllP8fNvdk79avo4Bay4vP1K1tz/nJSSXEvA0gyvQQeddvkPo9uXu52/vjx5lf8HXQ5SB5R1JloAAAAASUVORK5CYII=" />
-<link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAE6ElEQVR42rWXTYxcRxWFv3Prve7p6e4Z28OMx38RhoSMhRdOgAixSEhAgFDEIhDEgkQIKUJsIoiiBHaINbBESJZArII0OxAIJWwQURA/iyHix0bBAXvE2OlJPE663f36varLon+wcbDjcfstnq5KJZ1b555b55YYfQak5srx/cHSU3J9BvxuQMzgM+FZ4LQ7P+1X9r3ea3++MMHUJFhYXvuELJyUdIfj4M6MwOmXYjA08ly0avFsjPGJNzunngcsAL64cuxjFrIXJBbdUxyfXLMAvzwUa6slT358x2uW0qkLtb31mj1Wn196sehtn1Fr9cSy+XBD6ACkBAqzOLkEZRT72xW//voWh1eHeGE8/P398YW/taxVj1sltRNmafC0yQ7OFBxNqT9+sOTwUkVnO0eZc/+dRShLTyHYQUuDpw306Kjg0iyAhYheIRkCygQeIQ+OA0UlEHJPDnrUJB1194kYbwm88pIqDZnP9zCsejg+EpMme6ax4S5JRw3wWZAevaKRLfDFD/6Apz76Cz619iykEl1fy263pvZRs5iMoupy75HPcs+hhzDN8+BdX+HQnnsoqsvXq65s9yo3IOEexzHUsybDKlGlgio5tayJk657RtttvYfVZaRALWtSVF2EpslMxOiebnxX7ObkZRpwaPE4X/3IOl+7/+fce/gRhrGHuPkutpsBnlAdU8lDdz3JkT1rtOorfHLtGRr5HpJXNy0oe6eUF1WXMvbHiQRyqzOsEmXVR4jc5vBd+McNE3CcMhW8Z+nDrLbXGFa9UX1JV7Hiu+zm7Ea0D6senz72TR688wmGVcH6n57l9+eew2Zza1/LgCRMGaZATCXt+jIfOPI5BuWALNT50B1fAMRszPp/EhCijAXdYnvaWkJUaTii2X0sNMGsE5CMYeqz0novD7//G7xv+QGGsY+kKwBnMiZcqwEhYipZrK/ypft+xErrAGUFJ3/3GJs7L6Nb86l3wIBEGfusLtzNvsYB3ui9QTA4uu8+YiqQdJsTGNObvCK6EywDfFz72wf+9l3wNtGVPT6Jb7Q2cnkf/69Y9f+bgGPKxkxE3BNBOZJhCiSPJI8E5YAIyqdrpoBkBOW4J5KP5lopJ7PRUFIlkRxqmV+TgIMTrMal/hbRK1r1veTBuNjfpKi69IrXadWbzNcCF/ubxDTgYn+T+VqgVW/SK16nqLpc7G+SB6NV30tMFf3y32xdalBFeFe7wnLnH50cM8azEh7mWsvfAgiWc2lwnu3eq7Tqi7z0r3X+cO4n4M7ZnQ3ac6u80vkjz//9OzjOuZ0Nclvk0uA1fvaXb9Mrtun0zjCoCoI5vzz1Xc7tvETnrTanL2Tsayd+/JsFTr7YZi73SSmkhZVjZ8zs3e7uQlbE3piTRC1rYgqUsU9MFeDkYY5gNWIaUsbBqByWkYcGyePYKwwEtdBEct4ajAbU6NCeSwiSJKWU/pmBr4OegZQcqGet6a040UIeGuSB6ZAx0UeW1/8rQE8I0cgXr1pzh8VGms7dMU2kaAa+ftseJtfx1whmjm8l1U5Y9/xGR+6PS5JkYbRhZl5ztbPjUbIgSXJ/vHt+oxMAK3rbZ2qNfb9F9oBke2fqNlfYrGTmzllP8fNvdk79avo4Bay4vP1K1tz/nJSSXEvA0gyvQQeddvkPo9uXu52/vjx5lf8HXQ5SB5R1JloAAAAASUVORK5CYII=" />
-<link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAE6ElEQVR42rWXTYxcRxWFv3Prve7p6e4Z28OMx38RhoSMhRdOgAixSEhAgFDEIhDEgkQIKUJsIoiiBHaINbBESJZArII0OxAIJWwQURA/iyHix0bBAXvE2OlJPE663f36varLon+wcbDjcfstnq5KJZ1b555b55YYfQak5srx/cHSU3J9BvxuQMzgM+FZ4LQ7P+1X9r3ea3++MMHUJFhYXvuELJyUdIfj4M6MwOmXYjA08ly0avFsjPGJNzunngcsAL64cuxjFrIXJBbdUxyfXLMAvzwUa6slT358x2uW0qkLtb31mj1Wn196sehtn1Fr9cSy+XBD6ACkBAqzOLkEZRT72xW//voWh1eHeGE8/P398YW/taxVj1sltRNmafC0yQ7OFBxNqT9+sOTwUkVnO0eZc/+dRShLTyHYQUuDpw306Kjg0iyAhYheIRkCygQeIQ+OA0UlEHJPDnrUJB1194kYbwm88pIqDZnP9zCsejg+EpMme6ax4S5JRw3wWZAevaKRLfDFD/6Apz76Cz619iykEl1fy263pvZRs5iMoupy75HPcs+hhzDN8+BdX+HQnnsoqsvXq65s9yo3IOEexzHUsybDKlGlgio5tayJk657RtttvYfVZaRALWtSVF2EpslMxOiebnxX7ObkZRpwaPE4X/3IOl+7/+fce/gRhrGHuPkutpsBnlAdU8lDdz3JkT1rtOorfHLtGRr5HpJXNy0oe6eUF1WXMvbHiQRyqzOsEmXVR4jc5vBd+McNE3CcMhW8Z+nDrLbXGFa9UX1JV7Hiu+zm7Ea0D6senz72TR688wmGVcH6n57l9+eew2Zza1/LgCRMGaZATCXt+jIfOPI5BuWALNT50B1fAMRszPp/EhCijAXdYnvaWkJUaTii2X0sNMGsE5CMYeqz0novD7//G7xv+QGGsY+kKwBnMiZcqwEhYipZrK/ypft+xErrAGUFJ3/3GJs7L6Nb86l3wIBEGfusLtzNvsYB3ui9QTA4uu8+YiqQdJsTGNObvCK6EywDfFz72wf+9l3wNtGVPT6Jb7Q2cnkf/69Y9f+bgGPKxkxE3BNBOZJhCiSPJI8E5YAIyqdrpoBkBOW4J5KP5lopJ7PRUFIlkRxqmV+TgIMTrMal/hbRK1r1veTBuNjfpKi69IrXadWbzNcCF/ubxDTgYn+T+VqgVW/SK16nqLpc7G+SB6NV30tMFf3y32xdalBFeFe7wnLnH50cM8azEh7mWsvfAgiWc2lwnu3eq7Tqi7z0r3X+cO4n4M7ZnQ3ac6u80vkjz//9OzjOuZ0Nclvk0uA1fvaXb9Mrtun0zjCoCoI5vzz1Xc7tvETnrTanL2Tsayd+/JsFTr7YZi73SSmkhZVjZ8zs3e7uQlbE3piTRC1rYgqUsU9MFeDkYY5gNWIaUsbBqByWkYcGyePYKwwEtdBEct4ajAbU6NCeSwiSJKWU/pmBr4OegZQcqGet6a040UIeGuSB6ZAx0UeW1/8rQE8I0cgXr1pzh8VGms7dMU2kaAa+ftseJtfx1whmjm8l1U5Y9/xGR+6PS5JkYbRhZl5ztbPjUbIgSXJ/vHt+oxMAK3rbZ2qNfb9F9oBke2fqNlfYrGTmzllP8fNvdk79avo4Bay4vP1K1tz/nJSSXEvA0gyvQQeddvkPo9uXu52/vjx5lf8HXQ5SB5R1JloAAAAASUVORK5CYII=" />
+<link rel="icon" type="image/x-icon" sizes="16x16 32x32 48x48" href="/favicon.ico" />
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <!-- End SEO Meta Tags -->
 <script data-lp-token-hydrate>
 (function(){try{
@@ -245,7 +281,7 @@
       overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
       function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
       var subTxt=successSubtext||('Thank you for purchasing '+pName+'.');
-      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Payment Successful!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-pay-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;background:color-mix(in srgb,'+successBtnColor+' 12%,white);margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="'+successBtnColor+'" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Payment Successful!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-pay-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
       document.body.appendChild(overlay);
       var pBtn=document.getElementById('lp-pay-success-btn');
       if(pBtn){pBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
@@ -322,7 +358,7 @@
       overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
       function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
       var subTxt=successSubtext||'Thank you for your order.';
-      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Order Confirmed!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-cart-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;background:color-mix(in srgb,'+successBtnColor+' 12%,white);margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="'+successBtnColor+'" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Order Confirmed!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-cart-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
       document.body.appendChild(overlay);
       var cBtn=document.getElementById('lp-cart-success-btn');
       if(cBtn){cBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
@@ -331,42 +367,6 @@
 })();
 </script>
 <link rel="stylesheet" href="/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"CallDirector AI","url":"https://calldirector.ai/","email":"hello@calldirector.ai","telephone":"+1-240-852-1600","description":"AI call answering, lead follow-up and booking systems for service businesses in Washington DC, Maryland and Virginia.","areaServed":["Washington, DC","Maryland","Virginia"],"founder":{"@type":"Person","name":"Rodrigue Dossouvi","sameAs":"https://www.linkedin.com/in/roddossouvi"},"sameAs":["https://facebook.com/CallDirectorAI","https://instagram.com/calldirectorai","https://share.google/0OtLmXQK4wiiwLQkR"]}</script>
-<script>
-/* Meta Pixel (dataset 1644617050560187) */
-!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-fbq('init','1644617050560187');
-fbq('track','PageView');
-
-/* Campaign attribution: remembers where a visitor came from (UTM / src / Facebook referrer) for 30 days
-   so the audit form can report the source. Wrapped in try/catch: storage can be blocked. */
-(function(){
-  var KEY = 'cd_attr';
-  function read(){ try { return JSON.parse(localStorage.getItem(KEY) || 'null'); } catch (e) { return null; } }
-  try {
-    var q = new URLSearchParams(location.search), cur = {}, campaign = false;
-    ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','src','fbclid'].forEach(function(k){
-      var v = q.get(k); if (v) { cur[k] = String(v).slice(0, 100); campaign = true; }
-    });
-    var ref = '';
-    try { ref = document.referrer ? new URL(document.referrer).hostname : ''; } catch (e) {}
-    if (!campaign && ref && ref.indexOf(location.hostname) === -1) { cur.ref = ref; }
-    var prev = read(), fresh = !prev || (Date.now() - prev.ts) > 30 * 864e5;
-    if (campaign || (cur.ref && fresh)) {
-      cur.landing = location.pathname; cur.ts = Date.now();
-      localStorage.setItem(KEY, JSON.stringify(cur));
-    }
-  } catch (e) {}
-  window.cdAttribution = function(){
-    var a = read() || {}, src = a.utm_source || a.src || '';
-    if (!src && a.ref) { src = /facebook\.com$|fb\.com$/.test(a.ref) ? 'facebook' : a.ref; }
-    var label = src || 'direct';
-    if (a.utm_medium) { label += ' / ' + a.utm_medium; }
-    if (a.utm_campaign) { label += ' / ' + a.utm_campaign; }
-    return { label: label, source: src || 'direct', medium: a.utm_medium || '', campaign: a.utm_campaign || '', content: a.utm_content || '', term: a.utm_term || '', landing: a.landing || '', fbclid: a.fbclid ? 'yes' : '' };
-  };
-})();
-</script>
 </head>
 <body>
 
@@ -417,6 +417,7 @@ fbq('track','PageView');
           <button type="button" class="link" id="chatOpen" aria-haspopup="dialog" style="background:none;border:0;cursor:pointer;color:var(--lav);font:inherit;font-size:15px;text-decoration:underline">or chat with Vera now</button>
           <p style="font-size:13px;color:rgba(196,181,253,.85);margin:0">Vera’s live demo line: <a href="tel:+12408521600" style="color:inherit;white-space:nowrap">(240) 852-1600</a></p>
         </div>
+        <a href="#reviews" style="display:inline-flex;align-items:center;gap:8px;font-size:15px;color:#fff;margin-top:10px"><span style="color:#F59E0B;letter-spacing:1px" aria-hidden="true">★★★★★</span><span><b>5.0</b> on Google · 5 reviews</span></a>
         <p style="font-size:15px;line-height:1.5;color:#fff;margin-top:14px;max-width:640px">Built by Rodrigue Dossouvi in Germantown, MD, with 22+ years keeping business phone lines connected.</p>
         <p style="font-size:13px;line-height:1.5;color:rgba(196,181,253,.85);margin-top:2px;max-width:700px">Already working for local businesses: <a href="#proof" style="color:inherit;text-decoration:underline">DCTA DMV · Bright Seal Tax · Trebor Financial Solutions · Peace Hair Braids</a></p>
       </div>
@@ -551,6 +552,31 @@ fbq('track','PageView');
       <h2 style="margin-bottom:14px">What We've Built</h2>
       <p class="muted lede" style="max-width:760px;margin-bottom:32px">Explore examples of delivered client work below. We publish measured outcomes only after collecting the evidence and obtaining client approval where required.</p>
       <div id="proof"></div>
+    </div>
+  </div>
+
+  <div class="sec" id="reviews">
+    
+    <div class="wrap">
+      <div class="rv-head">
+        <div>
+          <div class="eyebrow">Google reviews</div>
+          <h2>What clients say</h2>
+          <div class="rv-score"><b>5.0</b><div class="rv-stars" role="img" aria-label="5 out of 5 stars">★★★★★</div><span>from 5 Google reviews</span></div>
+        </div>
+        <div class="rv-btns">
+          <a class="btn btn-outline" href="https://share.google/0OtLmXQK4wiiwLQkR" target="_blank" rel="noopener">Read all reviews on Google</a>
+          <a class="btn btn-primary" href="https://g.page/r/CWCokT6eN77fEAE/review" target="_blank" rel="noopener">Leave us a review</a>
+        </div>
+      </div>
+      <div class="rv-grid">
+        <figure class="card rv"><div class="rv-stars" role="img" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“The team was able to develop both my website and AI Google calling setup. They provided clear communication, timely responses, and dependable support.”</blockquote><figcaption><b>Odilia K.</b><span>Website + AI phone receptionist</span></figcaption></figure>
+        <figure class="card rv"><div class="rv-stars" role="img" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“He is professional and amazing.”</blockquote><figcaption><b>Kossi A.</b><span>Website for a hair salon · Minnesota</span></figcaption></figure>
+        <figure class="card rv"><div class="rv-stars" role="img" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“They made the setup process easy and straightforward, and their service has been a valuable addition to our business.”</blockquote><figcaption><b>Yolande</b><span>Client</span></figcaption></figure>
+        <figure class="card rv"><div class="rv-stars" role="img" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“I particularly appreciate his ability to explain technical matters clearly, provide practical solutions, and ensure that issues are addressed promptly and efficiently.”</blockquote><figcaption><b>Robert</b><span>Client</span></figcaption></figure>
+        <figure class="card rv"><div class="rv-stars" role="img" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“From our flyers and business cards to our digital designs and website, everything has turned out great.”</blockquote><figcaption><b>A.D.</b><span>Print, design + website</span></figcaption></figure>
+      </div>
+      <p class="muted" style="font-size:14px;margin-top:18px">Excerpts from reviews posted on our Google Business Profile.</p>
     </div>
   </div>
 
@@ -694,7 +720,7 @@ fbq('track','PageView');
 
   var FAQ = [
     ['Will it sound like a robot?', 'Vera tells callers she is an AI assistant. We set her voice, script, and escalation rules with you, and you hear sample calls before anything goes live.'],
-    ['What if it is an emergency or a call she can\u2019t handle?', 'We agree the rules with you up front: which calls go straight to a person, which take a message, and what Vera never answers on her own.'],
+    ['What if it is an emergency or a call she can’t handle?', 'We agree the rules with you up front: which calls go straight to a person, which take a message, and what Vera never answers on her own.'],
     ['Do you text my customers?', 'Yes, with their consent. We register your business for compliant text messaging as part of setup, so replies land reliably instead of getting filtered by carriers as spam.'],
     ['How long does setup take?', 'Most systems go live 2 to 3 weeks after kickoff, depending on how much of your current site and CRM we’re rebuilding versus building from scratch.'],
     ['Is there a contract?', 'No long-term contract. A one-time setup or implementation fee gets your system built and live, then every plan runs month-to-month. Cancel with 30 days’ notice.']
@@ -741,7 +767,7 @@ fbq('track','PageView');
     var box = document.getElementById('sample-call');
     if (!box || !CONFIG.sampleCall || !CONFIG.sampleCall.enabled || !CONFIG.sampleCall.src) { return; }
     var p = document.createElement('p'); p.className = 'muted-d'; p.style.cssText = 'font-size:15px;margin-bottom:8px';
-    p.textContent = 'Hear a sample call \u2014 a recorded example of Vera answering a business call.';
+    p.textContent = 'Hear a sample call — a recorded example of Vera answering a business call.';
     var au = document.createElement('audio'); au.controls = true; au.preload = 'none'; au.src = CONFIG.sampleCall.src; au.style.cssText = 'width:100%;max-width:420px';
     box.appendChild(p); box.appendChild(au);
     box.removeAttribute('hidden');
@@ -768,8 +794,8 @@ fbq('track','PageView');
     var box = document.getElementById('proof'); if (!box) { return; }
     var html = '';
     if (CONFIG.showProjects && CONFIG.projects && CONFIG.projects.length) {
-      html += '<div class="eyebrow" style="margin-bottom:16px">What we\u2019ve built</div><div class="g g3" style="margin-bottom:24px">' + CONFIG.projects.map(function (p) {
-        return '<div class="card"><div class="tag">' + esc(p.trade) + '</div><h3>' + esc(p.company) + '</h3>' + (p.location ? '<p class="muted" style="margin-bottom:8px">' + esc(p.location) + '</p>' : '') + '<p>' + esc(p.built) + '</p>' + (p.url ? '<p style="margin-top:12px"><a class="link" href="' + esc(p.url) + '" target="_blank" rel="noopener">Visit site \u2192</a></p>' : '') + '</div>';
+      html += '<div class="eyebrow" style="margin-bottom:16px">What we’ve built</div><div class="g g3" style="margin-bottom:24px">' + CONFIG.projects.map(function (p) {
+        return '<div class="card"><div class="tag">' + esc(p.trade) + '</div><h3>' + esc(p.company) + '</h3>' + (p.location ? '<p class="muted" style="margin-bottom:8px">' + esc(p.location) + '</p>' : '') + '<p>' + esc(p.built) + '</p>' + (p.url ? '<p style="margin-top:12px"><a class="link" href="' + esc(p.url) + '" target="_blank" rel="noopener">Visit site →</a></p>' : '') + '</div>';
       }).join('') + '</div>';
     }
     if (CONFIG.caseStudies.length) {
@@ -780,11 +806,11 @@ fbq('track','PageView');
     }
     if (CONFIG.testimonials.length) {
       html += '<div class="g g3">' + CONFIG.testimonials.map(function (t) {
-        return '<div class="quote"><p class="q">\u201C' + esc(t.quote) + '\u201D</p><div><b>' + esc(t.name) + '</b><br><small>' + esc([t.role, t.company].filter(Boolean).join(', ')) + (t.note ? ' \u00B7 ' + esc(t.note) : '') + '</small></div></div>';
+        return '<div class="quote"><p class="q">“' + esc(t.quote) + '”</p><div><b>' + esc(t.name) + '</b><br><small>' + esc([t.role, t.company].filter(Boolean).join(', ')) + (t.note ? ' · ' + esc(t.note) : '') + '</small></div></div>';
       }).join('') + '</div>';
     }
     if (!CONFIG.caseStudies.length && !CONFIG.testimonials.length) {
-      html += '<div class="card" style="padding:clamp(24px,3vw,40px)"><h3 style="font-size:26px;margin-bottom:10px">We publish results only after we\u2019ve measured them.</h3><p class="lede" style="color:var(--muted);max-width:760px">Our first clients are being tracked from a baseline: how fast new leads get a reply, how many after-hours inquiries are captured, and how many bids are followed up. When the numbers are in, and the client approves them, they appear here.</p><p style="margin-top:20px"><a class="link" href="pricing/">See the founding client program \u2192</a></p></div>';
+      html += '<div class="card" style="padding:clamp(24px,3vw,40px)"><h3 style="font-size:26px;margin-bottom:10px">We publish results only after we’ve measured them.</h3><p class="lede" style="color:var(--muted);max-width:760px">Our first clients are being tracked from a baseline: how fast new leads get a reply, how many after-hours inquiries are captured, and how many bids are followed up. When the numbers are in, and the client approves them, they appear here.</p><p style="margin-top:20px"><a class="link" href="pricing/">See the founding client program →</a></p></div>';
     }
     box.innerHTML = html;
   })();
@@ -844,10 +870,10 @@ fbq('track','PageView');
       status.textContent = 'Thanks, ' + name + '. This preview form is not connected to a lead flow yet, so nothing was sent.';
       form.reset(); return;
     }
-    status.textContent = 'Sending\u2026';
+    status.textContent = 'Sending…';
     fetch(CONFIG.formEndpoint, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
-      .then(function (r) { if (!r.ok) { throw new Error('bad status'); } status.textContent = 'Thanks, ' + name + '. Your audit request is in and we\u2019ll be in touch.'; form.reset(); })
-      .catch(function () { status.textContent = 'Thanks, ' + name + '. Your audit request is in and we\u2019ll be in touch.'; form.reset(); });
+      .then(function (r) { if (!r.ok) { throw new Error('bad status'); } status.textContent = 'Thanks, ' + name + '. Your audit request is in and we’ll be in touch.'; form.reset(); })
+      .catch(function () { status.textContent = 'Thanks, ' + name + '. Your audit request is in and we’ll be in touch.'; form.reset(); });
   });
   }
 

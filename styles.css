@@ -1335,3 +1335,9 @@ a.tile:hover{border-color:var(--accent)}
 @media (max-width:920px){
   .nav .nav-login{display:block}
 }
+
+/* About page founder section: photo column + text, stacks on tablets and phones */
+.split.split-about{grid-template-columns:minmax(0,340px) minmax(0,1fr);align-items:start}
+@media (max-width:1000px){.split.split-about{grid-template-columns:1fr}}
+/* Two-column sections always stack on tablets and phones, even when a page sets its columns inline */
+@media (max-width:1000px){.split{grid-template-columns:1fr!important}}

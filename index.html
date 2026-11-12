@@ -938,7 +938,8 @@ fbq('track','PageView');
     var num=(a.getAttribute('href').match(/^sms:(\+?\d+)/)||[])[1]||'+18447278090';
     var pretty=num.replace(/^\+?1?(\d{3})(\d{3})(\d{4})$/,'($1) $2-$3');
     var done=function(copied){toast.textContent='Text us at '+pretty+' from your phone.'+(copied?' Number copied.':'');toast.style.display='block';clearTimeout(t);t=setTimeout(function(){toast.style.display='none';},6000);};
-    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(pretty).then(function(){done(true);},function(){done(false);});}else{done(false);}
+    done(false);
+    try{if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(pretty).then(function(){done(true);},function(){});}}catch(err){}
   });
 })();
 </script>

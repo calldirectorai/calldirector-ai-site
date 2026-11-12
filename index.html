@@ -438,7 +438,7 @@ fbq('track','PageView');
       </video>
       <div class="btns" style="display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:22px">
         <a class="btn btn-primary" href="https://buy.stripe.com/5kQ00j54H1ok0v90fY33W0g" target="_blank" rel="noopener">Get Set Up: $299 Setup</a>
-        <a class="btn btn-outline" href="sms:+18447278090?&amp;body=Hi%2C%20I%27d%20like%20to%20get%20set%20up%20with%20Vera.">Text Us First</a>
+        <a class="btn btn-outline" href="sms:+13018351744?&amp;body=Hi%2C%20I%27d%20like%20to%20get%20set%20up%20with%20Vera.">Text Us First</a>
         <a class="btn btn-outline" href="tel:+12408521600">Hear Vera Answer Live</a>
       </div>
       <p class="muted" style="text-align:center;font-size:14px;margin-top:12px">Vera Front Desk: $299 one-time setup today, then $197/month once Vera is live. Start with 60 days, then month-to-month with 30 days&rsquo; notice. Live in 5 business days or your setup fee back.</p>
@@ -935,7 +935,7 @@ fbq('track','PageView');
     var a=e.target.closest&&e.target.closest('a[href^="sms:"]');
     if(!a||isMobile())return;
     e.preventDefault();
-    var num=(a.getAttribute('href').match(/^sms:(\+?\d+)/)||[])[1]||'+18447278090';
+    var num=(a.getAttribute('href').match(/^sms:(\+?\d+)/)||[])[1]||'+13018351744';
     var pretty=num.replace(/^\+?1?(\d{3})(\d{3})(\d{4})$/,'($1) $2-$3');
     var done=function(copied){toast.textContent='Text us at '+pretty+' from your phone.'+(copied?' Number copied.':'');toast.style.display='block';clearTimeout(t);t=setTimeout(function(){toast.style.display='none';},6000);};
     done(false);

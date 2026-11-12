@@ -403,6 +403,12 @@
         <div aria-hidden="true" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden"><label for="f-company2">Leave this field empty</label><input id="f-company2" name="company2" type="text" tabindex="-1" autocomplete="off"></div>
         <button class="btn btn-primary" type="submit" style="min-height:56px">Request My Free Audit</button>
         <p class="status" id="formStatus" role="status" aria-live="polite"></p>
+        <div id="afterSubmit" hidden style="margin-top:18px;padding-top:18px;border-top:1px solid #E2E8F0">
+          <p style="font-weight:700;margin:0 0 4px">While you wait: watch Vera in under 2 minutes</p>
+          <p class="muted" style="font-size:15px;margin:0 0 12px">What happens to your missed calls today, and how Vera fixes it.</p>
+          <video controls playsinline preload="none" poster="/assets/video/vera-overview-poster.jpg?v=5" style="display:block;width:100%;border-radius:12px;background:#0F172A" aria-label="Rodrigue explains how Vera answers your calls"><source src="/assets/video/vera-overview.mp4?v=5" type="video/mp4"></video>
+          <p style="font-size:14px;margin:12px 0 0"><a class="link" href="../vera/#watch">Ready to start? See Vera Front Desk: $299 setup, then $197/month &rarr;</a></p>
+        </div>
       </form>
     </div>
   </div>
@@ -617,7 +623,7 @@
     }
     status.textContent = 'Sending\u2026';
     fetch(CONFIG.formEndpoint, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
-      .then(function (r) { if (!r.ok) { throw new Error('bad status'); } status.textContent = 'Thanks, ' + name + '. Your audit request is in. We\u2019ll confirm the business details and send your private one-page report within 48 hours.'; lastSent = Date.now(); try { if (window.gtag) { gtag('event', 'generate_lead', { event_category: 'audit_form', lead_source: attr.label }); } if (window.fbq) { fbq('track', 'Lead'); } } catch (x) {} form.reset(); })
+      .then(function (r) { if (!r.ok) { throw new Error('bad status'); } status.textContent = 'Thanks, ' + name + '. Your audit request is in. We\u2019ll confirm the business details and send your private one-page report within 48 hours.'; lastSent = Date.now(); var aw = document.getElementById('afterSubmit'); if (aw) { aw.hidden = false; } try { if (window.gtag) { gtag('event', 'generate_lead', { event_category: 'audit_form', lead_source: attr.label }); } if (window.fbq) { fbq('track', 'Lead'); } } catch (x) {} form.reset(); })
       .catch(function () { status.innerHTML = 'We couldn\u2019t send your request right now. Please try again, call <a href="tel:+12408521600">(240) 852-1600</a>, or email <a href="mailto:hello@calldirector.ai">hello@calldirector.ai</a>.'; });
   });
   }

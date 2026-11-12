@@ -926,5 +926,22 @@ fbq('track','PageView');
 })();
 </script>
 <script src="https://app.calldirector.ai/widget.js" data-widget="3893022" async></script>
+<div id="smsToast" role="status" aria-live="polite" style="display:none;position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:9999;background:#0F172A;color:#fff;border:1px solid #7C3AED;border-radius:12px;padding:14px 18px;font:500 15px/1.4 'DM Sans',system-ui,sans-serif;box-shadow:0 12px 30px rgba(0,0,0,.35);max-width:92vw;text-align:center"></div>
+<script>
+(function(){
+  function isMobile(){return /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent)||(navigator.maxTouchPoints>1&&/Mac/i.test(navigator.platform));}
+  var t,toast=document.getElementById('smsToast');
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a[href^="sms:"]');
+    if(!a||isMobile())return;
+    e.preventDefault();
+    var num=(a.getAttribute('href').match(/^sms:(\+?\d+)/)||[])[1]||'+18447278090';
+    var pretty=num.replace(/^\+?1?(\d{3})(\d{3})(\d{4})$/,'($1) $2-$3');
+    var done=function(copied){toast.textContent='Text us at '+pretty+' from your phone.'+(copied?' Number copied.':'');toast.style.display='block';clearTimeout(t);t=setTimeout(function(){toast.style.display='none';},6000);};
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(pretty).then(function(){done(true);},function(){done(false);});}else{done(false);}
+  });
+})();
+</script>
+
 </body>
 </html>

@@ -1341,3 +1341,6 @@ a.tile:hover{border-color:var(--accent)}
 @media (max-width:1000px){.split.split-about{grid-template-columns:1fr}}
 /* Two-column sections always stack on tablets and phones, even when a page sets its columns inline */
 @media (max-width:1000px){.split{grid-template-columns:1fr!important}}
+
+/* Button rows outside the home hero and CTA bands (page heroes on Pricing, About, How, Industries, Solutions): keep a gap between buttons, including when they stack full-width on phones */
+.btns{display:flex;flex-wrap:wrap;align-items:center;gap:14px}

@@ -421,6 +421,28 @@ fbq('track','PageView');
 .trust{display:flex;flex-wrap:wrap;align-items:center;gap:6px 18px;margin-top:22px;padding-top:18px;border-top:1px solid rgba(255,255,255,.12);font-size:14px;color:#E2E8F0}
 .trust a{color:inherit}
 .trust .cl{flex-basis:100%;font-size:13px;color:rgba(196,181,253,.85)}
+.kicker{display:inline-flex;align-items:center;gap:10px;margin:0 0 18px;padding:7px 14px 7px 12px;border:1px solid rgba(196,181,253,.35);border-radius:999px;background:rgba(124,58,237,.14);color:#E9E3FF;font-size:14px;font-weight:600;letter-spacing:.01em}
+.kicker i{width:8px;height:8px;border-radius:50%;background:#F59E0B;box-shadow:0 0 0 4px rgba(245,158,11,.18)}
+@media (max-width:560px){.kicker{font-size:12.5px;white-space:nowrap;padding:6px 12px 6px 10px;gap:8px}}
+.hero .stats{margin-bottom:calc(-1 * clamp(16px,3vw,40px))}
+@media (max-width:900px){.stats>div:nth-child(n+3){border-top:1px solid rgba(255,255,255,.12)}}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:clamp(36px,5vw,56px);border-top:1px solid rgba(255,255,255,.12)}
+.stats>div{padding:22px 20px 4px;border-left:1px solid rgba(255,255,255,.12)}
+.stats>div:first-child{border-left:0;padding-left:0}
+.stats b{display:block;font-family:var(--display);font-size:clamp(28px,3vw,38px);line-height:1;color:#fff;letter-spacing:-.02em}
+.stats b em{font-style:normal;color:#F59E0B}
+.stats span{display:block;margin-top:8px;font-size:14px;line-height:1.4;color:#CBD5E1}
+@media (max-width:900px){.stats{grid-template-columns:repeat(2,minmax(0,1fr));text-align:center}.stats>div{padding:20px 12px 4px}.stats>div:first-child{padding-left:12px}.stats>div:nth-child(3){border-left:0}}
+.ww{padding:clamp(36px,5vw,56px) 0;background:var(--alt);border-bottom:1px solid var(--border)}
+.ww h2{font-size:clamp(24px,2.4vw,32px);margin:6px 0 0}
+.ww .ww-g{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:26px}
+.ww .ww-c{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:18px 18px 20px}
+.ww .ww-c h3{font-family:var(--body);font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent-text,#6D28D9);margin:0 0 12px}
+.ww ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.ww li{font-size:15px;font-weight:600;padding:7px 12px;border-radius:999px;border:1px solid var(--border);background:var(--bg)}
+.ww .ww-n{margin:18px 0 0;font-size:14px;color:var(--muted)}
+@media (max-width:1000px){.ww .ww-g{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.ww .ww-g{grid-template-columns:1fr}}
 @media (max-width:900px){.hero2{grid-template-columns:minmax(0,1fr);grid-template-areas:"a" "v" "b";row-gap:24px;text-align:center}.hero2 .lede,.hero2 .terms{margin-left:auto;margin-right:auto}.hero2 .hb{justify-content:center}.trust{justify-content:center}}
 @media (max-width:560px){.hero2 .hb .btn{width:100%}}
 </style>
@@ -428,6 +450,7 @@ fbq('track','PageView');
     <div class="wrap">
       <div class="hero2">
         <div class="txt-a">
+          <p class="kicker"><i aria-hidden="true"></i>Keep your number. Keep your phone system.</p>
           <h1>Stop Losing Jobs to Missed Calls and Slow <span style="white-space:nowrap">Follow-Up</span></h1>
           <p class="lede muted-d">Every call answered, day or night. Every form answered in seconds. Your customer gets a real next step instead of your voicemail, and you get the job.</p>
         </div>
@@ -445,14 +468,33 @@ fbq('track','PageView');
           <a class="ha" href="audit/">Not sure yet? Get a free Lead Leak Audit &rarr;</a>
           <p class="terms">Vera Front Desk: $299 one-time setup, then $197/month once Vera is live. Start with 60 days, then month-to-month with 30 days&rsquo; notice. Live in 5 business days or your setup fee back.</p>
           <div class="trust">
-            <a href="#reviews" style="display:inline-flex;align-items:center;gap:8px"><span style="color:#F59E0B;letter-spacing:1px" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span><b>5.0</b> on Google &middot; 5 reviews</span></a>
-            <span>Built by Rodrigue Dossouvi, 22+ years in telecom &middot; Germantown, MD</span>
+            <span>Built by Rodrigue Dossouvi, phone-systems engineer &middot; Germantown, MD</span>
             <span class="cl">Working for: <a href="#proof" style="text-decoration:underline">DCTA DMV &middot; Bright Seal Tax &middot; Trebor Financial Solutions &middot; Peace Hair Braids</a></span>
           </div>
         </div>
       </div>
+      <div class="stats" role="list" aria-label="CallDirector AI at a glance">
+        <div role="listitem"><b>22+<em> yrs</em></b><span>building and supporting business phone systems</span></div>
+        <div role="listitem"><a href="#reviews" style="color:inherit;text-decoration:none"><b>5.0<em>&#9733;</em></b><span>on Google, from every review so far</span></a></div>
+        <div role="listitem"><b>24/7</b><span>every call answered, nights and weekends included</span></div>
+        <div role="listitem"><b>5<em> days</em></b><span>to go live, or your setup fee back</span></div>
+      </div>
     </div>
   </div>
+
+  <section class="ww" aria-labelledby="ww-h">
+    <div class="wrap">
+      <div class="eyebrow">Works with</div>
+      <h2 id="ww-h">Works with the phone system and tools you already use.</h2>
+      <div class="ww-g">
+        <div class="ww-c"><h3>Phone systems</h3><ul><li>RingCentral</li><li>Cisco</li><li>AudioCodes</li><li>Twilio</li><li>Your current business line</li></ul></div>
+        <div class="ww-c"><h3>Calendars &amp; payments</h3><ul><li>Google Calendar</li><li>Outlook</li><li>Stripe</li></ul></div>
+        <div class="ww-c"><h3>Messaging &amp; social</h3><ul><li>Text (SMS)</li><li>WhatsApp</li><li>Facebook</li><li>Instagram</li><li>TikTok</li><li>Telegram</li></ul></div>
+        <div class="ww-c"><h3>AI voices &amp; models</h3><ul><li>xAI</li><li>OpenAI</li></ul></div>
+      </div>
+      <p class="ww-n">Keep your number. Calls reach Vera through simple forwarding or a direct connection to your phone system, and transfers ring your team with an introduction first.</p>
+    </div>
+  </section>
 
   <div class="sec"><div class="wrap">
     <div class="eyebrow" style="text-align:center">How it works</div>
@@ -544,7 +586,7 @@ fbq('track','PageView');
         <div class="eyebrow" style="margin:0">Part of the system</div>
         <h2>Meet Vera — Your 24/7 AI Front Desk</h2>
         <p class="lede muted-d" style="max-width:560px">Vera answers when your team can't. She can answer common questions, qualify prospects, capture customer information, route calls, book appointments, and trigger automated follow-up — day or night.</p>
-        <p style="font-size:15px;line-height:1.6;color:#CBD5E1;margin:0;max-width:560px"><b style="color:#fff">Answers in English, Spanish, French and more.</b><br>Works with Google Calendar, Outlook, Stripe, WhatsApp, Facebook and Instagram, plus your other tools through webhooks.</p>
+        <p style="font-size:15px;line-height:1.6;color:#CBD5E1;margin:0;max-width:560px"><b style="color:#fff">Answers in English, Spanish, French and more.</b><br>Works in front of RingCentral, Cisco or your current business line, and with Google Calendar, Outlook, Stripe, WhatsApp, Facebook and Instagram, plus your other tools through webhooks.</p>
         <a class="btn btn-primary" href="vera/"><svg width="18" height="18"><use href="#i-play"/></svg>Meet Vera</a>
         <!-- Enable when /audio/vera-sample-call.mp3 (recorded sample call, client-permitted) is approved -->
         <div id="sample-call" hidden></div>
@@ -914,7 +956,11 @@ fbq('track','PageView');
 </script>
 <div id="vera-teaser" style="position:fixed;right:24px;bottom:96px;z-index:999998;max-width:230px;background:#fff;color:#0F172A;border:1px solid #E2E0EC;border-radius:16px;padding:14px 30px 14px 16px;box-shadow:0 8px 24px rgba(15,23,42,.18);font-family:'DM Sans',system-ui,-apple-system,sans-serif;font-size:14px;line-height:1.4;opacity:0;transform:translateY(8px);transition:opacity .3s ease,transform .3s ease;display:none">
   <button aria-label="Dismiss" onclick="document.getElementById('vera-teaser').style.display='none'" style="position:absolute;top:6px;right:8px;background:none;border:0;color:#94A3B8;font-size:16px;line-height:1;cursor:pointer;padding:2px">&times;</button>
-  Same AI that answers our phone. Try me. 👋
+  Same AI that answers our phone. Chat, text or call me. 👋
+  <div style="display:flex;gap:8px;margin-top:10px">
+    <a href="sms:+13018351744" style="flex:1;text-align:center;padding:7px 0;border-radius:10px;background:#7C3AED;color:#fff;font-weight:600;text-decoration:none">Text</a>
+    <a href="tel:+12408521600" style="flex:1;text-align:center;padding:7px 0;border-radius:10px;border:1px solid #7C3AED;color:#6D28D9;font-weight:600;text-decoration:none">Call Vera</a>
+  </div>
 </div>
 <script>
 (function(){
@@ -931,7 +977,6 @@ fbq('track','PageView');
     t.style.display = 'block';
     requestAnimationFrame(function(){ t.style.opacity = '1'; t.style.transform = 'none'; });
   }, 2500);
-  setTimeout(function(){ if (t) { t.style.display = 'none'; } }, 15000);
 })();
 </script>
 <script src="https://app.calldirector.ai/widget.js" data-widget="3893022" async></script>
